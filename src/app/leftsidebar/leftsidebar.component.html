@@ -1,0 +1,90 @@
+<div class="topnavhamburger">
+    <button    (click)="change(!active)" mat-button class="menu-button">
+        <mat-icon>menu</mat-icon>
+      </button>
+    
+</div>
+<button [ngClass]="active ? activeoverlayState : baseoverlayState" (click)="active = !active">
+
+
+</button>
+<div  [ngClass]="active ? activeState : baseState">
+    
+    <div class="leftsidenavheader">
+        <span></span>
+
+    </div>
+    <div class="navitem">
+       <div class="navitemcontainer">
+        <span>Log off</span>
+        <div>
+           
+            <span >
+                <mat-icon>lock_open</mat-icon>
+
+            </span>
+            
+          
+        </div>
+
+
+       </div>
+       
+    </div>
+    
+    <div class="navitem">
+        <div class="navitemcontainer">
+        <span>English</span>
+        <div>
+            <mat-icon [ngClass]="active ? arrowsidenav : unactivearrowsidenav">keyboard_arrow_down</mat-icon>
+            <mat-icon>flag</mat-icon>
+
+        </div>
+        </div>
+    </div>
+    <div class="navitem">
+        <div class="navitemcontainer">
+        <span>What is this</span>
+        
+        <div>
+         
+            <mat-icon>accessible</mat-icon>
+
+        </div>
+        </div>
+    </div>
+    <div class="navitem">
+        <div class="navitemcontainer">
+        <span>Who are we?</span>
+        <div>
+          
+            <mat-icon >accessibility_new</mat-icon>
+        </div>
+        </div>
+        
+
+    </div>
+    <div class="navitem">
+        <div class="navitemcontainer">
+        <span>Feedback</span>
+        <div>
+            <mat-icon [ngClass]="active ? arrowsidenav : unactivearrowsidenav">keyboard_arrow_down</mat-icon>
+            <mat-icon>question_answer</mat-icon>
+
+        </div>
+        </div>
+    </div>
+    <div class="navitem">
+        <div class="navitemcontainer">
+        <span>Information</span>
+        <div>
+            <mat-icon [ngClass]="active ? arrowsidenav : unactivearrowsidenav">keyboard_arrow_down</mat-icon>
+            <mat-icon>perm_device_information</mat-icon>
+
+        </div>
+        </div>
+    </div>
+  </div>
+  
+
+  
