@@ -7,7 +7,8 @@ import { Component, Input } from '@angular/core';
   template: "<p>Hello, {{name}}!</p>",
 })
 export class MaincontentComponent {
-  @Input() name: string | undefined;
+  @Input() name: string|undefined;
+  heroes = [{title:"hi",link:"hihi"},{title:"djdj",link:"ijij"}]
 
   
   

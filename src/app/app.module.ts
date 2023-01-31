@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { TopnavbarComponent } from './topnavbar/topnavbar.component';
 import { LeftsidebarComponent } from './leftsidebar/leftsidebar.component';
 import { MaincontentComponent } from './maincontent/maincontent.component';
+import { CardComponent } from './card/card.component';
+import { CardtwobuttonsComponent } from './cardtwobuttons/cardtwobuttons.component';
 
 const materialModules = [
   MatIconModule
@@ -18,6 +20,8 @@ const materialModules = [
     TopnavbarComponent,
     LeftsidebarComponent,
     MaincontentComponent,
+    CardComponent,
+    CardtwobuttonsComponent,
     
   ],
   imports: [

@@ -4,6 +4,7 @@
   display:absolute;
 
 
+
   
   margin-left: 5%;
   margin-top:10vh;
@@ -20,8 +21,9 @@
 
 
   
-  margin-left: 0%;
+
   margin-top:10vh;
+  margin-left: 0;
   padding:2%;
   
   flex-direction: column;
@@ -40,9 +42,6 @@ svg.material-icons:not(:last-child) {
   margin-right: 8px;
 }
 
-.card svg.material-icons path {
-  fill: #888;
-}
 
 .card-container {
   display: flex;
@@ -51,48 +50,74 @@ svg.material-icons:not(:last-child) {
   margin-top: 0
 }
 
-.card {
-  all: unset;
-  border-radius: 4px;
-  border: 1px solid #eee;
-  background-color: #fafafa;
-  height: 40px;
-  width: 200px;
-  margin: 0 8px 16px;
-  padding: 16px;
+.carditem{
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  align-items: center;
-  transition: all 0.2s ease-in-out;
-  line-height: 24px;
+  
+
+}
+.dashboardcontainer{
+ 
+  
+
+}
+.dashboardcontent{
+  background-color: #9ea5ae43;
+  opacity:100%;
+  margin: 0;
+  padding: 0;
+}
+.dashboardblueheader{
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  color: rgb(255, 250, 237);
+  border-top-left-radius: 5px 5px;
+  border-top-right-radius: 5px 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+
+  
 }
 
-.card-container .card:not(:last-child) {
+
+.card {
+  all: unset;
+  height: auto;
+  
+  
+}
+
+.card-container .carditem:not(:last-child) {
   margin-right: 0;
 }
 
-.card.card-small {
+.carditem.card-small {
   height: 16px;
   width: 168px;
 }
-
-.card-container .card:not(.highlight-card) {
+.highlight-card {
+  
+  display: flex;
+  justify-content:center;
+}
+.card.xsmallcard{
+  width: 10vw;
+}
+.highlight-card p{
+  
+}
+.card-container .carditem:not(.highlight-card) {
+  flex-grow: 1;
+  width: 30%;
   cursor: pointer;
 }
 
-.card-container .card:not(.highlight-card):hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-}
 
-.card-container .card:not(.highlight-card):hover .material-icons path {
-  fill: rgb(105, 103, 103);
-}
+
 
 .card.highlight-card {
   background-color: #1976d2;
-  color: white;
+  color: rgb(193, 193, 193);
   font-weight: 600;
   border: none;
   width: auto;
@@ -229,7 +254,7 @@ svg#clouds {
 }
 
 /* Responsive Styles */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .card-container > *:not(.circle-link) ,
   .terminal {
     width: 100%;
@@ -237,7 +262,13 @@ svg#clouds {
 
   .card:not(.highlight-card) {
     height: 16px;
+  
     margin: 8px 0;
+  }
+  .card-container .carditem:not(.highlight-card) {
+    flex-grow: 1;
+    width:45%;
+    cursor: pointer;
   }
 
   .card.highlight-card span {
@@ -255,4 +286,47 @@ svg#clouds {
     display: none;
     visibility: hidden;
   }
+  .content{
+    padding-left: 0;
+    padding-right: 0
+
+
+  };
+  .card-container .carditem:not(.highlight-card) {
+    flex-grow: 1;
+    width:45%;
+    cursor: pointer;
+  }
 }
+
+@media screen and (max-width: 430px) {
+  
+  .card-container .carditem:not(.highlight-card) {
+    flex-grow: 1;
+    width:60%;
+    cursor: pointer;
+  }
+  .content{
+    padding-left: 0;
+    padding-right: 0
+    
+
+  };
+}
+
+@media screen and (max-width: 330px) {
+  
+  .card-container .carditem:not(.highlight-card) {
+    flex-grow: 1;
+    width:90%;
+    cursor: pointer;
+  }
+  .content{
+    padding-left: 0;
+    padding-right: 0
+    
+
+  };
+}
+
+
