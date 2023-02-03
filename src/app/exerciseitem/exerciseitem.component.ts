@@ -11,7 +11,44 @@ import {
 @Component({
   selector: 'app-exerciseitem',
   templateUrl: './exerciseitem.component.html',
-  template:' <button (click)="changeselected(!isSelected)" class="button-28" role="button" [innerHTML]="isSelected?add:deselect"></button>',
+  template:` 
+  <button (click)="changeselected(!isSelected)" class="button-28" role="button" [innerHTML]="isSelected?add:deselect"></button>
+  <mat-panel-title>
+            {{title}}
+          </mat-panel-title>
+          <mat-panel-description>
+            {{category}}
+
+          </mat-panel-description>
+
+
+          <div class="detailflex">
+          <span>
+              {{exercisedetails}}
+
+          </span>
+          <span>
+              {{aim}}
+          </span>
+          <span>
+              {{tinstruction}}
+          </span>
+          <span>
+              {{pinstruction}}
+          </span>
+          <span>
+              {{pro}}
+          </span>
+          <span>
+              {{pre}}
+          </span>
+      </div>
+
+  
+  
+  `
+  
+  ,
   styleUrls: ['./exerciseitem.component.css'],
   animations: [
     // animation triggers go here
@@ -85,7 +122,13 @@ export class ExerciseitemComponent {
   @Input() id: string|undefined;
   @Input() title: string|undefined;
   @Input() category: string|undefined;
-  @Input() exercisedetails: Object|undefined;
+  @Input() exercisedetails: string|undefined;
+  @Input() aim: string|undefined;
+  @Input() pinstruction: string|undefined;
+  @Input() tinstruction: string|undefined;
+  @Input() pro: string|undefined;
+  @Input() pre: string|undefined;
+  
   
 
   opened=false  

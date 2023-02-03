@@ -12,10 +12,11 @@
     <mat-expansion-panel [ngClass]="isSelected ? greenbackground : normalbackground">
         <mat-expansion-panel-header [ngClass]="isSelected ? greenbackground : normalbackground">
           <mat-panel-title>
-            This is the expansion title
+            {{title}}
           </mat-panel-title>
           <mat-panel-description>
-            This is a summary of the content
+            {{category}}
+
           </mat-panel-description>
         </mat-expansion-panel-header>
         <div class="flex">
@@ -26,22 +27,41 @@
             <div class="secondflex">
                 <div class="detailflex">
                     <span>
-                        therpaist aim
+                        <div class="strong">
+                            Therapist Aim
+                        </div>
+                        {{exercisedetails}}
+
                     </span>
                     <span>
-                        therpaist aim
+                        <div class="strong">
+                            Clients Aim
+                        </div>
+                        {{aim}}
                     </span>
                     <span>
-                        therpaist aim
+                        <div class="strong">
+                            Therapist Instruction
+                        </div>
+                        {{tinstruction}}
                     </span>
                     <span>
-                        therpaist aim
+                        <div class="strong">
+                            Patient's Instruction
+                        </div>
+                        {{pinstruction}}
                     </span>
                     <span>
-                        therpaist aim
+                        <div class="strong">
+                            Progression/Regression
+                        </div>
+                        {{pro}}
                     </span>
                     <span>
-                        therpaist aim
+                        <div class="strong">
+                           Precaution
+                        </div>
+                        {{pre}}
                     </span>
                 </div>
 
