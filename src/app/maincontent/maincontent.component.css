@@ -293,7 +293,7 @@ svg#clouds {
     padding-right: 0
 
 
-  };
+  }
   .card-container .carditem:not(.highlight-card) {
     flex-grow: 1;
     width:45%;
@@ -313,7 +313,7 @@ svg#clouds {
     padding-right: 0
     
 
-  };
+  }
 }
 
 @media screen and (max-width: 330px) {
@@ -328,7 +328,7 @@ svg#clouds {
     padding-right: 0
     
 
-  };
+  }
 }
 
 
