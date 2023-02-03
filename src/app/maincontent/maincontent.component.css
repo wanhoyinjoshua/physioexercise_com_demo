@@ -2,6 +2,8 @@
 
 .content {
   display:absolute;
+  height: 100%;
+    overflow: overlay;
 
 
 

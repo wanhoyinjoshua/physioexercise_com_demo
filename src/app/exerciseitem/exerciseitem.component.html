@@ -1,0 +1,73 @@
+<div class="col">
+    <div class="inputflex">
+        <label class="container">
+            <input  [checked]="isSelected" (click)="changeselected(!isSelected)" class="inputbox" type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <span class="checkmark"></span>
+           </label>
+        
+
+    </div>
+   
+    
+    <mat-expansion-panel [ngClass]="isSelected ? greenbackground : normalbackground">
+        <mat-expansion-panel-header [ngClass]="isSelected ? greenbackground : normalbackground">
+          <mat-panel-title>
+            This is the expansion title
+          </mat-panel-title>
+          <mat-panel-description>
+            This is a summary of the content
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="flex">
+            <div class="img">
+               <img src="https://www.physiotherapyexercises.com/ExerciseImages/Drawings_Webp/Ex0040_ad_l_pa_lp.webp" alt="">
+
+            </div>
+            <div class="secondflex">
+                <div class="detailflex">
+                    <span>
+                        therpaist aim
+                    </span>
+                    <span>
+                        therpaist aim
+                    </span>
+                    <span>
+                        therpaist aim
+                    </span>
+                    <span>
+                        therpaist aim
+                    </span>
+                    <span>
+                        therpaist aim
+                    </span>
+                    <span>
+                        therpaist aim
+                    </span>
+                </div>
+
+                <div class="actionbtnflex">
+                    <div>
+
+                        <button (click)="changeselected(!isSelected)" class="button-28" role="button" [innerHTML]="isSelected?add:deselect"></button>
+
+
+                    </div>
+                    <div>
+                        <button class="button-edit-exercise" role="button">Edit Exercise</button>
+
+
+                    </div>
+                    <div>
+                        <button class="button-delete-exercise" role="button">Delete Exercise</button>
+
+
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+      </mat-expansion-panel>
+
+
+  </div>

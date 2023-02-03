@@ -1,0 +1,438 @@
+.content{
+    display:absolute;
+    height: 100%;
+      overflow: overlay;
+  
+  
+  
+    
+    margin-left: 5%;
+    margin-top:10vh;
+    padding:2%;
+    
+    flex-direction: column;
+    align-items: center;
+}
+
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  tr{
+    
+  }
+  .expanded-row-content {
+    
+ }
+ .expandedrowwrapper{
+    justify-content: center;
+    width: 80%;
+   
+    text-align: left;
+
+ }
+
+  table :not(:first-child){
+    cursor: pointer;
+  }
+
+  .accordion {
+    box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+    margin: 12px;
+    height: auto;
+}
+
+.title {
+  padding: 12px;
+}
+
+.content {
+  padding: 12px;
+}
+
+.divA {
+  
+
+    height: 100vh;
+    width: 100vw;
+    color: #fff;
+    background-color: #0bc;
+    
+  }
+
+ 
+  
+  .col{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.1fr 1.9fr;
+    margin-top: 2vh;
+  }
+
+  .colinput{
+    width:100%
+
+  }
+  .colinputcheck{
+
+    width: 100%;
+    height: 100%;
+  }
+
+  .inputbox:checked{
+    background-color:green;
+    }
+
+    
+
+
+
+    .container {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+    .container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+      }  
+      
+      .container:hover input ~ .checkmark {
+        background-color: #ccc;
+      }
+
+      .container input:checked ~ .checkmark {
+        background-color: rgb(0, 67, 190);
+      }
+
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+
+
+      .container input:checked ~ .checkmark:after {
+        display: block;
+      }
+
+      .container .checkmark:after {
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+
+      .inputflex{
+        display: flex;
+        justify-content: center;
+        margin-top: 20%;
+      }
+
+      .flex{
+        display: grid;
+        width: 100%;
+        min-height: 30vh;
+        gap:5%;
+
+        grid-template-columns: 0.3fr 0.7fr;
+      }
+      .secondflex{
+        display: grid;
+        
+        flex-grow: 1;
+        
+        grid-template-columns: 0.5fr 0.5fr;
+
+      }
+      .detailflex{
+        display: grid;
+        
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+      }
+      .actionbtnflex{
+        display: grid;
+        
+        grid-template-rows: 1fr 1fr 1fr ;
+
+
+      }
+
+      [disabled] *{
+        opacity: 100%;
+        font-weight: 600;
+        color: black !important;
+        cursor: default;
+      }
+
+      .mat-expanded {
+        background-color: rgba(245, 245, 245, 0.942);
+        margin-top: 5px;
+       
+        
+      }
+      
+   
+
+
+      .greenbg{
+        background-color: rgba(228, 228, 228, 0.942) !important;
+
+      }
+     
+      .img{
+        height: 100%;
+      }
+
+      .img img{
+        height: 100%;
+      }
+      
+
+
+
+      .button-28 {
+        appearance: none;
+        background-color: transparent;
+        border: 2px solid #3074c8;
+        border-radius: 15px;
+        background-color: #cfe5ffca;
+        box-sizing: border-box;
+        color: #3B3B3B;
+        cursor: pointer;
+        display: inline-block;
+        font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+        font-size: 16px;
+        font-weight: 600;
+        line-height: normal;
+        margin: 0;
+        min-height: 60px;
+        min-width: 0;
+        outline: none;
+        padding: 16px 24px;
+        text-align: center;
+        text-decoration: none;
+        transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: 100%;
+        will-change: transform;
+      }
+      
+      .button-28:disabled {
+        pointer-events: none;
+      }
+      
+      .button-28:hover {
+        color: #fff;
+        background-color: rgb(35, 110, 154);
+        box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+        transform: translateY(-2px);
+      }
+      
+      .button-28:active {
+        box-shadow: none;
+        transform: translateY(0);
+      }
+
+
+
+
+      
+      .button-edit-exercise {
+        appearance: none;
+        background-color: transparent;
+        border: 2px solid #c2a41e;
+        background-color: #fff7d4e3;
+        border-radius: 15px;
+        box-sizing: border-box;
+        color: #3B3B3B;
+        cursor: pointer;
+        display: inline-block;
+        font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+        font-size: 16px;
+        font-weight: 600;
+        line-height: normal;
+        margin: 0;
+        min-height: 60px;
+        min-width: 0;
+        outline: none;
+        padding: 16px 24px;
+        text-align: center;
+        text-decoration: none;
+        transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: 100%;
+        will-change: transform;
+      }
+      
+      .button-edit-exercise:disabled {
+        pointer-events: none;
+      }
+      
+      .button-edit-exercise:hover {
+        color: #fff;
+        background-color: #d0af2c;
+        box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+        transform: translateY(-2px);
+      }
+      
+      .button-edit-exercise:active {
+        box-shadow: none;
+        transform: translateY(0);
+      }
+
+
+
+      .button-delete-exercise {
+        appearance: none;
+        background-color: transparent;
+        border: 2px solid #c24a1e;
+        background-color:#ffefe9;
+        border-radius: 15px;
+        box-sizing: border-box;
+        color: #3B3B3B;
+        cursor: pointer;
+        display: inline-block;
+        font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+        font-size: 16px;
+        font-weight: 600;
+        line-height: normal;
+        margin: 0;
+        min-height: 60px;
+        min-width: 0;
+        outline: none;
+        padding: 16px 24px;
+        text-align: center;
+        text-decoration: none;
+        transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: 100%;
+        will-change: transform;
+      }
+      
+      .button-delete-exercise:disabled {
+        pointer-events: none;
+      }
+      
+      .button-delete-exercise:hover {
+        color: #fff;
+        background-color: #eb0c00;
+        box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+        transform: translateY(-2px);
+      }
+      
+      .button-delete-exercise:active {
+        box-shadow: none;
+        transform: translateY(0);
+      }
+
+      
+      @media screen and (max-width: 768px) {
+
+      }
+
+      @media only screen and (max-width: 600px) {
+        .mat-expansion-panel-header-description{
+            display: none;
+          }
+          ::ng-deep .mat-expansion-panel-body{
+            margin:0 !important;
+            padding:5px !important;
+          }
+
+          .content{
+            display:absolute;
+            height: 100%;
+              overflow: overlay;
+
+              
+          
+          
+          
+            
+            margin-left: 0px;
+
+            margin-top:10vh;
+            padding:0px;
+            
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .flex{
+            display: flex;
+            min-height: 30vh;
+    
+            flex-direction: column;
+            gap: 5%;
+          }
+          .flex *{
+            margin-bottom: 5%;
+
+          }
+          .secondflex{
+            display: grid;
+            
+            grid-template-rows: 1fr;
+    
+          }
+          
+
+          
+        
+
+      }
+
+  
+
+      @media screen and (max-width: 430px) {}
+
+      @media screen and (max-width: 330px) {}
+
+
+
+      
