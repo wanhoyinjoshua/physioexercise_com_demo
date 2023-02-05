@@ -19,8 +19,9 @@ padding-bottom: 20vh;
   
 }
 
-.mat-menu{
+.mat-mdc-menu-content{
   z-index:3000;
+  box-shadow:10 10 10 10 ;
   
 }
 
@@ -171,7 +172,7 @@ tr :hover{
   bottom:0;
   height: auto;
   max-height: 30vh;
-  z-index: 2000;
+  z-index: 1000;
 }
 @media screen and (max-width: 768px) {
 
@@ -188,6 +189,7 @@ tr :hover{
 }
 .footer{
   height: auto;
+  z-index: 1000;
 }
  .embeddedutility{
   background-color: white;
