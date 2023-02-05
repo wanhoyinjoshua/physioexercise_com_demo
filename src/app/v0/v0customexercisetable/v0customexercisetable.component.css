@@ -127,7 +127,7 @@ tr :hover{
   
   
  
-  width: 95%;
+  width: 98%;
   z-index: 1000;
   
 }
@@ -168,15 +168,14 @@ tr :hover{
   background-color: white;
   padding-left: 1% ;
   padding-right: 2%;
-  padding-bottom:3%;
+  padding-bottom:5%;
   
   
-  height: 15vh;
+  height: auto;
  
-  position: fixed;
-  bottom: 0;
+  
  
-  width: 92%;
+  width: 97%;
   
 }
  .example-element-detail{
