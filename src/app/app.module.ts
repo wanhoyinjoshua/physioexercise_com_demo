@@ -13,8 +13,13 @@ import { CustomexercisetableviewComponent } from './customexercisetableview/cust
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatButtonModule} from '@angular/material/button'
 import { ExerciseitemComponent } from './exerciseitem/exerciseitem.component'
-import {MatMenuModule} from '@angular/material/menu'
-
+import {MatMenuModule} from '@angular/material/menu';
+import { V0customexercisetableComponent } from '../app/v0/v0customexercisetable/v0customexercisetable.component'
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatTableModule } from '@angular/material/table' 
+import { CommonModule } from '@angular/common'; 
 const materialModules = [
   MatIconModule
 ];
@@ -29,15 +34,21 @@ const materialModules = [
     CardtwobuttonsComponent,
     CustomexercisetableviewComponent,
     ExerciseitemComponent,
+    V0customexercisetableComponent,
     
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     BrowserAnimationsModule,
     MatExpansionModule,
     MatButtonModule,
     AppRoutingModule,
     MatMenuModule,
+    MatPaginatorModule,
+    MatCheckboxModule,
+    MatTableModule,
+    MatSortModule,
     ...materialModules
   ],
   exports:[
