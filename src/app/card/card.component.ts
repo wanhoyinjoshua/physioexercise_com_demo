@@ -1,5 +1,8 @@
-import { Component, Input } from '@angular/core';
-
+import { Component, Input, Inject } from '@angular/core';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+export interface DialogData {
+ popup:any;
+}
 @Component({
   selector: 'app-card',
   template:`
@@ -15,6 +18,8 @@ import { Component, Input } from '@angular/core';
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css']
 })
+
+
 export class CardComponent {
   @Input() title: string|undefined;
   @Input() description: string|undefined;
@@ -22,4 +27,11 @@ export class CardComponent {
   @Input() linkurl: string|undefined;
   @Input() modal: boolean|undefined;
 
+  animal: string;
+  name: string;
+
+
+ 
+
 }
+

@@ -20,6 +20,11 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatTableModule } from '@angular/material/table' 
 import { CommonModule } from '@angular/common'; 
+import {MatDialogModule} from '@angular/material/dialog';
+import { PopupcardComponent } from './popupcard/popupcard.component';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatListModule} from '@angular/material/list';
+
 const materialModules = [
   MatIconModule
 ];
@@ -35,6 +40,7 @@ const materialModules = [
     CustomexercisetableviewComponent,
     ExerciseitemComponent,
     V0customexercisetableComponent,
+    PopupcardComponent,
     
   ],
   imports: [
@@ -49,6 +55,9 @@ const materialModules = [
     MatCheckboxModule,
     MatTableModule,
     MatSortModule,
+    MatDialogModule,
+    MatDividerModule,
+    MatListModule,
     ...materialModules
   ],
   exports:[
