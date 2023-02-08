@@ -1,5 +1,6 @@
-import {Input,Component, Inject} from '@angular/core';
+import {Input,Component, Inject,HostListener} from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {ModalComponent} from "../modal/modal.component"
 export interface DialogData {
   animal: string;
   name: string;
@@ -27,13 +28,27 @@ export class PopupcardComponent {
   @Input() buttontext: string|undefined;
   @Input() linkurl: string|undefined;
   @Input() modal: boolean|undefined;
-
+  public getScreenWidth: any;
+  public getScreenHeight: any;
+  
+  ngOnInit() {
+      this.getScreenWidth = window.innerWidth;
+      this.getScreenHeight = window.innerHeight;
+  }
+  @HostListener('window:resize', ['$event'])
+  onWindowResize() {
+    this.getScreenWidth = window.innerWidth;
+    this.getScreenHeight = window.innerHeight;
+    console.log(this.getScreenHeight)
+  }
   constructor(public dialog: MatDialog) {}
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
-      width: '50vw',
-      height:"80vh",
+    const dialogRef = this.dialog.open(ModalComponent, {
+    
+      width: this.getScreenWidth>600?"50vw":"100vw",
+      height:this.getScreenWidth>600?"auto":"auto",
+      
       data: {name: this.name, animal: this.animal}
     });
 

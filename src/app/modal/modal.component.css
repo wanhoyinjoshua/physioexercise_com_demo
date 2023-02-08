@@ -18,7 +18,7 @@
 
 }
 .dialogwrapper  *{
-    text-align: center;
+ 
     margin-bottom: 2%;
 }
 .leave{
@@ -32,7 +32,7 @@
     cursor: pointer; /* Pointer/hand icon */
     width: 50%; /* Set a width if needed */
     display: block; /* Make the buttons appear below each other */
-    margin: 0 auto;
+   
     margin-bottom: 10px;
   }
 
@@ -41,10 +41,26 @@
     .dialogwrapper button {
     
         cursor: pointer; /* Pointer/hand icon */
-        width: 90%; /* Set a width if needed */
+        width: 100%; /* Set a width if needed */
         display: block; /* Make the buttons appear below each other */
-        margin: 0 auto;
-        margin-bottom: 10px;
+        text-align: left;
+        
+      }
+      .descriptiondetail{
+        display: none;
+      }
+
+      button{
+        font-size: 1rem;
+        margin-bottom: 10%;
+        margin-top: 10%;
+      }
+
+      .headercontainer{
+        display: flex;
+       flex-direction: column-reverse;
+
+        
       }
 
   }
@@ -60,7 +76,7 @@
     cursor: pointer;
     display: inline-block;
     font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-    font-size: 16px;
+    font-size: 2rem;
     font-weight: 600;
     line-height: normal;
     margin: 0;
@@ -113,7 +129,7 @@
   display: inline-flex;
   flex: 1 1 auto;
   font-family: Inter,sans-serif;
-  font-size: 1.2rem;
+  font-size: 2rem;
   font-weight: 300;
   justify-content: center;
   line-height: 1;
@@ -128,6 +144,7 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  width: auto;
 }
 
 .border{
@@ -135,6 +152,10 @@
     
 }
 
+.button-35:hover {
+  box-shadow: #121212 0 0 0 1px, transparent 0 0 0 0;
+}
+     
 
   .dialogwrapper  button:not(:last-child) {
      /* Prevent double borders */
@@ -143,4 +164,34 @@
   /* Add a background color on hover */
   .dialogwrapper button:hover {
     background-color: #bdbdbd;
+  }
+
+  .descriptionleft{
+    width: 100%;
+    text-align: left;
+  }
+
+  .buttontext{
+    padding: 5%;
+  }
+  .buttontext *{
+    text-align: left;
+  }
+  .descriptiondetail{
+    color: #3b3b3bae;
+    
+  }
+
+  .mdc-button__label{
+    text-align: center;
+  }
+  .headercontainer{
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  .master{
+    display: flex;
+    flex-direction: column-reverse;
   }

@@ -37,7 +37,7 @@
     color: orange;
   }
   .card:hover button{
-    background-color: green;
+  
     cursor: pointer;
   }
 

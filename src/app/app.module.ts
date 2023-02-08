@@ -24,6 +24,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { PopupcardComponent } from './popupcard/popupcard.component';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
+import { ModalComponent } from './modal/modal.component';
 
 const materialModules = [
   MatIconModule
@@ -41,6 +42,7 @@ const materialModules = [
     ExerciseitemComponent,
     V0customexercisetableComponent,
     PopupcardComponent,
+    ModalComponent,
     
   ],
   imports: [
