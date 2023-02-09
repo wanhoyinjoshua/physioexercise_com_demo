@@ -70,7 +70,7 @@ svg.material-icons:not(:last-child) {
   padding: 0;
 }
 .dashboardblueheader{
-  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  background-image: linear-gradient(to right, #607d8b 0%, #495e6a 100%);
   color: rgb(255, 250, 237);
   border-top-left-radius: 5px 5px;
   border-top-right-radius: 5px 5px;

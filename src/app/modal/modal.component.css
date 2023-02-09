@@ -8,6 +8,7 @@
 
 }
 
+
 .dialogwrapper{
     width: 100%;
     display: flex;
@@ -36,34 +37,7 @@
     margin-bottom: 10px;
   }
 
-  @media screen and (max-width: 768px) {
  
-    .dialogwrapper button {
-    
-        cursor: pointer; /* Pointer/hand icon */
-        width: 100%; /* Set a width if needed */
-        display: block; /* Make the buttons appear below each other */
-        text-align: left;
-        
-      }
-      .descriptiondetail{
-        display: none;
-      }
-
-      button{
-        font-size: 1rem;
-        margin-bottom: 10%;
-        margin-top: 10%;
-      }
-
-      .headercontainer{
-        display: flex;
-       flex-direction: column-reverse;
-
-        
-      }
-
-  }
 
   /* CSS */
 .button-28 {
@@ -179,6 +153,8 @@
   }
   .descriptiondetail{
     color: #3b3b3bae;
+    text-align: left !important;
+ 
     
   }
 
@@ -188,10 +164,85 @@
   .headercontainer{
     display: flex;
     justify-content: space-between;
+    background-color: #607d8b;
+    color: white;
 
+  }
+  .headercontainer *{
+    color: white;
   }
 
   .master{
     display: flex;
     flex-direction: column-reverse;
+  }
+
+  .buttontext{
+    height: auto;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+}
+
+.center *{
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start !important ;
+}
+.center{
+    min-width: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start !important;
+    
+
+
+}
+
+[mat-raised-button] {
+    justify-content: flex-start;
+  }
+
+  .mat-icon{
+    margin-right: 5px;
+  }
+
+  .icon{
+    margin-right: 5%;
+  }
+
+  @media screen and (max-width: 768px) {
+ 
+    .dialogwrapper button {
+    
+        cursor: pointer; /* Pointer/hand icon */
+        width: 100%; /* Set a width if needed */
+        display: block; /* Make the buttons appear below each other */
+        text-align: left;
+        
+      }
+      .descriptiondetail{
+        display: none !important;
+      }
+
+      button{
+        font-size: 1rem;
+        margin-bottom: 10%;
+        margin-top: 10%;
+      }
+
+      .headercontainer{
+        display: flex;
+       flex-direction: column-reverse;
+
+        
+      }
+      .buttontext{
+        display: flex;
+        flex-direction: column;
+      }
+
   }

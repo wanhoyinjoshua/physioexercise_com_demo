@@ -124,13 +124,13 @@
     padding-right: 0;
 }
 .navitem :hover{
-    background-color: #1976d2;
+    background-color: #607d8b;
     cursor: pointer;
     
 }
   .leftsidenavheader{
     height: 10vh;
-    background-color: #1976d2;
+    background-color: #607d8b;
   }
   .fivepercent{
     min-width:10%;
