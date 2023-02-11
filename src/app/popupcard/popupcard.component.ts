@@ -28,6 +28,7 @@ export class PopupcardComponent {
   @Input() buttontext: string|undefined;
   @Input() linkurl: string|undefined;
   @Input() modal: boolean|undefined;
+  @Input() modalcontent:any;
   public getScreenWidth: any;
   public getScreenHeight: any;
   
@@ -49,7 +50,7 @@ export class PopupcardComponent {
       width: this.getScreenWidth>600?"50vw":"100vw",
       height:this.getScreenWidth>600?"auto":"auto",
       
-      data: {name: this.name, animal: this.animal}
+      data: {content:this.modalcontent,title:this.title}
     });
 
     dialogRef.afterClosed().subscribe(result => {

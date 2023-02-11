@@ -7,8 +7,7 @@ import { AppComponent } from './app.component';
 import { TopnavbarComponent } from './topnavbar/topnavbar.component';
 import { LeftsidebarComponent } from './leftsidebar/leftsidebar.component';
 import { MaincontentComponent } from './maincontent/maincontent.component';
-import { CardComponent } from './card/card.component';
-import { CardtwobuttonsComponent } from './cardtwobuttons/cardtwobuttons.component';
+
 import { CustomexercisetableviewComponent } from './customexercisetableview/customexercisetableview.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatButtonModule} from '@angular/material/button'
@@ -36,8 +35,7 @@ const materialModules = [
     TopnavbarComponent,
     LeftsidebarComponent,
     MaincontentComponent,
-    CardComponent,
-    CardtwobuttonsComponent,
+
     CustomexercisetableviewComponent,
     ExerciseitemComponent,
     V0customexercisetableComponent,

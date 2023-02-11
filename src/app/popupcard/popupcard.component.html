@@ -5,10 +5,19 @@
     <p class="card__content">
         {{description}}
         </p>
-    <div class="">
+    <div class="" *ngIf="modal==true">
+        
         <button mat-raised-button  (click)="openDialog()">{{buttontext}}</button>
       
        
     </div>
+    <div class="" *ngIf="!modal">
+        
+        <button mat-raised-button >{{buttontext}}</button>
+      
+       
+    </div>
+    
+   
 </div>
 

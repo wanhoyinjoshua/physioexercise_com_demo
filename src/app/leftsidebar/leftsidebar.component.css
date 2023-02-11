@@ -41,7 +41,7 @@
         position: fixed;
         top: 2.5%;
         left: 2.5%;
-        z-index: 10000;
+        z-index: 200;
     }
     .sidebaractive{
         margin: 0;

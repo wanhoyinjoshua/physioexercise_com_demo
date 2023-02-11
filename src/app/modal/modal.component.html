@@ -2,103 +2,36 @@
     <div mat-dialog-content class="">
         <div class="">
         
-                
-     
     
         
-    
-            <button mat-raised-button class="buttontext">
-                <mat-icon class="icon">announcement</mat-icon>
-                <div class="center">
-                    <div>
-                        Create Custom Exercise
-    
-                    </div>
-                    <div class="descriptiondetail">
-                        You can add your own exercises to this software. 
-    
-                    </div>
-                    
-    
-                </div>
-               
-            </button>
-                    
-               
-            <mat-divider></mat-divider>
-            <button mat-raised-button class="buttontext">
-                <mat-icon class="icon">announcement</mat-icon>
-                <div class="center">
-                    <div>
-                        Access Exercise made by others
-    
-                    </div>
-                    <div class="descriptiondetail">
-                        Review Exercises made by other physiotherapists via a code
-    
-                    </div>
-                    
-    
-                </div>
-               
-            </button>
-           
-            <mat-divider></mat-divider>
-            <button mat-raised-button class="buttontext">
-                
-                <mat-icon class="icon">announcement</mat-icon>
-                <div class="center">
-                    <div >
-                        Share Custom Exercise with others
-    
-                    </div>
-                    <div class="descriptiondetail">
-                        Share your custom exercises with other physiotherapists 
-    
-                    </div>
-                </div>
+    <span *ngFor="let hero of data.content">
 
-                
-                    
-                    
-    
-                
-               
-            </button>
-            
-            <mat-divider></mat-divider>
+   
             <button mat-raised-button class="buttontext">
-                <mat-icon class="icon">announcement</mat-icon>
+                <mat-icon class="icon">{{hero.icontext}}</mat-icon>
                 <div class="center">
-                    <div>
-                        Physiotherapists Viewing your exercises
+                    <div class="title">
+                        {{hero.title}}
     
                     </div>
                     <div class="descriptiondetail">
-                        Manage access to your custom exercises
+                       {{hero.description}}
+    
                     </div>
                     
     
                 </div>
                
             </button>
-        
+                    
+               
             <mat-divider></mat-divider>
-            <button mat-raised-button class="buttontext">
-                <mat-icon class="icon">announcement</mat-icon>
-                <div >
-                    <div>
-                        Need more flexibility?
-                    </div>
-                    <div class="descriptiondetail">
-                        Create your own exercise booklet layout, customise to suit your organisation's needs.
-    
-                    </div>
-                    
-    
-                </div>
-               
-            </button>
+
+        </span>
+
+
+        
+           
         
     
         
@@ -107,7 +40,7 @@
     </div>
     
     <div class="headercontainer">
-        <h1 mat-dialog-title>Custom Exercises:</h1>
+        <h1 mat-dialog-title>{{data.title}}:</h1>
     <div mat-dialog-actions >
         <button mat-button (click)="onNoClick()">Close menu</button>
         

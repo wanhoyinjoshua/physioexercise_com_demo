@@ -2,6 +2,9 @@
     
     width: 100%;
 }
+.master{
+    z-index: 400000;
+}
 .dialogcontent *{
     justify-content: center;
   
@@ -208,10 +211,12 @@
 
   .mat-icon{
     margin-right: 5px;
+   
   }
 
   .icon{
     margin-right: 5%;
+
   }
 
   @media screen and (max-width: 768px) {
@@ -245,4 +250,8 @@
         flex-direction: column;
       }
 
+  }
+
+  .title{
+    text-align: left;
   }
