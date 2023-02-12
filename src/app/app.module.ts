@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { TopnavbarComponent } from './topnavbar/topnavbar.component';
 import { LeftsidebarComponent } from './leftsidebar/leftsidebar.component';
 import { MaincontentComponent } from './maincontent/maincontent.component';
-
+import {MatCardModule} from '@angular/material/card';
 import { CustomexercisetableviewComponent } from './customexercisetableview/customexercisetableview.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatButtonModule} from '@angular/material/button'
@@ -24,6 +24,9 @@ import { PopupcardComponent } from './popupcard/popupcard.component';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
 import { ModalComponent } from './modal/modal.component';
+import { ExercisecollectionComponent } from './exercisecollection/exercisecollection.component';
+import {MatRadioModule} from '@angular/material/radio';
+import { FormsModule } from '@angular/forms';
 
 const materialModules = [
   MatIconModule
@@ -41,9 +44,11 @@ const materialModules = [
     V0customexercisetableComponent,
     PopupcardComponent,
     ModalComponent,
+    ExercisecollectionComponent,
     
   ],
   imports: [
+    FormsModule ,
     CommonModule,
     BrowserModule,
     BrowserAnimationsModule,
@@ -58,6 +63,8 @@ const materialModules = [
     MatDialogModule,
     MatDividerModule,
     MatListModule,
+    MatCardModule,
+    MatRadioModule,
     ...materialModules
   ],
   exports:[

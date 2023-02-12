@@ -1,0 +1,108 @@
+.content{
+    display:absolute;
+    height: 100%;
+      overflow: overlay;
+  
+  
+  
+    
+    margin-left: 5%;
+    margin-top:10vh;
+    padding:2%;
+    
+
+}
+.content::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .content {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+.contentwrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+.contentwrapper .left{
+    width: 50%;
+}
+.contentwrapper .right{
+    width: 50%;
+}
+
+.accordian{
+    width: 100%;
+}
+
+.mat-accordian{
+    width: 100%;
+}
+.left *{
+    width: 100%;
+}
+.right {
+    width:100%;
+    height:auto;
+    
+}
+.example-headers-align .mat-expansion-panel-header-description {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mat-expansion-panel-header{
+    display: flex;
+    justify-content: space-between;
+  }
+  .mat-panel-description{
+    justify-content: flex-end;
+    text-align: center;
+  }
+  .example-card{
+    width: 30%;
+  }
+
+  .example-card * img{
+    width: 30%;
+  }
+
+  .resistance{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .exercisesection{
+  
+   
+  }
+  .rightwrapper{
+   
+
+  }
+  .resistance{
+    padding-left: 10px;
+    padding-right: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .header{
+    width: 100%;
+  }
+
+.title{
+    border-top-width: 3px;
+    border-bottom-width: 3px;
+    border-right: 0;
+    border-left: 0;
+    
+   
+    color: black;
+    border-style: solid;
+   
+
+}
