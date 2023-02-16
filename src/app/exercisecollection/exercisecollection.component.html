@@ -3,7 +3,7 @@
       
 
         <div class="left">
-            <label id="example-radio-group-label">Pick your favorite season</label>
+            <label id="example-radio-group-label"> </label>
             <mat-radio-group aria-label="Select an option"  aria-labelledby="example-radio-group-label"
             [(ngModel)]="selectedmodule"
             (change)="radioButtonGroupChange($event)"
@@ -29,7 +29,25 @@
                 <mat-card-header>
                   <mat-card-title-group>
                     <mat-card-title>Level 1</mat-card-title>
-                    <mat-card-subtitle>High Risk-Moderate Impact activities</mat-card-subtitle>
+                    <mat-card-subtitle>
+                       <span>
+                         High Risk-Moderate Impact activities
+                         <br/>
+                         <span>
+                            Sanet is a 82 year old women who recently slipped in the bathroom at home and sustained a hip fracture, she also had two previous falls prior to this current fall, she was hospitalised and 
+the fracture was surgically managed, she was now discharged back home with her mobility below baseline. 
+<br/>
+She mobilise with a 4WW amnd walks slowly, she also had impaired balance and am quite scared of walking because of the fall. 
+<br/>
+The aim of Sanet's program was to encourage movement and minimise bone loss by incoporating low impact exercises to increase muscle strnegth and improve balance to maximise functional mobility and improve quality of life.
+
+
+
+                         </span>
+                        </span>
+                     
+
+                    </mat-card-subtitle>
                    
                   </mat-card-title-group>
                 </mat-card-header>
@@ -46,7 +64,18 @@
                   <mat-card-title-group>
                     <mat-card-title>Level 2</mat-card-title>
                     <mat-card-subtitle>Moderate-High impact
-                        activities</mat-card-subtitle>
+                        activities
+                    
+                        <br/>
+                        <span>
+                            Dalia is a 73- year old women and had a history of low trauma Colles' fracture 11 years ago. 
+                            She  is independent with all ADLS but have trouble balancing at times.
+                        <br/>
+                        The aim of Dalia's program is to minimise bone loss by incporating moderate impact exercises and improve muscle strength to support mobility and balance to minimise risk of falling.
+                        <br/>
+                        This program is suitable for people who are independent with short distances walking but may or may not require aids for longer distances.
+                        
+                        </span></mat-card-subtitle>
                    
                   </mat-card-title-group>
                 </mat-card-header>
@@ -65,8 +94,18 @@
                  <mat-card-header>
                    <mat-card-title-group>
                      <mat-card-title>Level 3</mat-card-title>
-                     <mat-card-subtitle>High Impact</mat-card-subtitle>
-                    
+                     <mat-card-subtitle>High Impact
+                        <br/>
+                     <span>
+                      Frank is independent with all ADLS and had no previous history of fractures.
+                     <br/>
+The aim of franks program is to minimise bone loss by incporating high impact exercises and maintaining muscle strength to support mobility and balance for optimal participation in the community 
+<br/>
+This program is suitable for people who are independent with walking and able to balance on one leg.
+
+                     </span>
+                     </mat-card-subtitle>
+                     
                    </mat-card-title-group>
                  </mat-card-header>
                  <mat-card-content>
