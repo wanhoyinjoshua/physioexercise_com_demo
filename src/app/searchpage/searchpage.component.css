@@ -2,6 +2,7 @@
     display:absolute;
     height: auto;
       overflow: overlay;
+      background-color: ;
   
   
   
@@ -20,6 +21,13 @@
     transform: translateY(5vh);
     
 
+  }
+  .subheader{
+    font-size: 24px;
+    font-weight:500;
+  line-height: 32px;
+  margin-bottom: 5vh;
+    
   }
 
 
@@ -106,6 +114,10 @@
 }
 .collectionmaster{
     padding-left: 5%;
+    
+    position:relative;
+  
+    
 }
 .primarysearchbuttonaction{
   
@@ -117,16 +129,20 @@
 }
 
 .carasoul{
-  width: 90%;
+  width: 100%;
   height: auto;
  
-  display: flex;
-  overflow-x: scroll;
-  gap: 10px;
+  display: grid;
+  
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 5vw;
   
 }
+.carasoul :last-child{
+ 
+}
 .example-card {
-  max-width: 400px;
+  max-width: 15vw;
 }
 
 .example-header-image {
@@ -143,9 +159,43 @@
 }
 
 
+.example-button-container.right{
+  position: absolute;
+  right: 0;
+  top:50%;
+  z-index: 100;
+  transform: translateX(24px);
+  
+}
+.example-button-container.left{
+  position: absolute;
+  left: 0;
+  top:50%;
+  z-index: 100;
+  transform: translateX(24px);
+  
+}
+
+
 /* Responsive Styles */
 
 @media screen and (max-width: 1090px) {
+  .carasoul{
+    width: 100%;
+    height: auto;
+   
+    display: grid;
+    
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5vw;
+    
+  }
+  .carasoul :last-child{
+   
+  }
+  .example-card {
+    max-width: 25vw;
+  }
   .searchfields {
     margin-right: 5px;
     display: flex;
@@ -157,6 +207,10 @@
     align-items: center !important;
     padding: 5px;
     max-width: auto;
+
+}
+.collectionmaster{
+  padding-left: 1%;
 
 }
 .headerwords{
@@ -190,6 +244,20 @@ padding-left: 1%;
     padding-left: 0%;
    
   }
+  .carasoul{
+    width: 100%;
+    height: auto;
+   
+    display: flex;
+    scroll-behavior: smooth;
+    overflow: scroll;
+    gap: 5vw;
+    
+  }
+  .example-card {
+    max-width: 70vw;
+  }
+  
   .headerwords{
     height: 100%;
     transform: translateY(0);

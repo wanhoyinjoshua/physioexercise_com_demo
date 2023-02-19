@@ -41,6 +41,7 @@ export class PopupcardComponent {
   }
   
   ngOnInit() {
+    
       this.getScreenWidth = window.innerWidth;
       this.getScreenHeight = window.innerHeight;
   }

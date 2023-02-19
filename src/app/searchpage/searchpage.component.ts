@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild,ElementRef } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
@@ -47,7 +47,12 @@ private _filter(value: string): string[] {
 
 
 }
+public getScreenWidth: any;
+public getScreenHeight: any;
+  
   ngOnInit() {
+    this.getScreenWidth = window.innerWidth;
+  this.getScreenHeight = window.innerHeight;
 
     this.filteredOptions = this.myControl.valueChanges.pipe(
       startWith(''),
@@ -213,6 +218,16 @@ private _filter(value: string): string[] {
 
 
      }
+
+     @ViewChild('widgetsContent') widgetsContent: ElementRef;
+     scrollLeft(){
+      
+      this.widgetsContent.nativeElement.scrollLeft -= this.getScreenWidth*0.3;
+    }
+  
+    scrollRight(){
+      this.widgetsContent.nativeElement.scrollLeft += this.getScreenWidth*0.3;
+    }
   
 
 
