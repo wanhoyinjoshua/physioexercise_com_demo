@@ -26,8 +26,13 @@ import {MatListModule} from '@angular/material/list';
 import { ModalComponent } from './modal/modal.component';
 import { ExercisecollectionComponent } from './exercisecollection/exercisecollection.component';
 import {MatRadioModule} from '@angular/material/radio';
-import { FormsModule } from '@angular/forms';
-
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { SearchpageComponent } from './searchpage/searchpage.component';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+import { SelectAllOptionComponent } from './select-all-option/select-all-option.component';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 const materialModules = [
   MatIconModule
 ];
@@ -45,6 +50,8 @@ const materialModules = [
     PopupcardComponent,
     ModalComponent,
     ExercisecollectionComponent,
+    SearchpageComponent,
+    SelectAllOptionComponent,
     
   ],
   imports: [
@@ -65,6 +72,11 @@ const materialModules = [
     MatListModule,
     MatCardModule,
     MatRadioModule,
+    MatAutocompleteModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatSelectModule,
+    MatButtonToggleModule,
     ...materialModules
   ],
   exports:[

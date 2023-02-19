@@ -1,6 +1,7 @@
 import {Input,Component, Inject,HostListener} from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import {ModalComponent} from "../modal/modal.component"
+import { Router } from '@angular/router';
 export interface DialogData {
   animal: string;
   name: string;
@@ -31,6 +32,13 @@ export class PopupcardComponent {
   @Input() modalcontent:any;
   public getScreenWidth: any;
   public getScreenHeight: any;
+
+  goToSearch(linkurl:any){
+    const navigationDetails: string[] = [linkurl];
+  
+    this.router.navigate(navigationDetails);
+
+  }
   
   ngOnInit() {
       this.getScreenWidth = window.innerWidth;
@@ -42,7 +50,7 @@ export class PopupcardComponent {
     this.getScreenHeight = window.innerHeight;
     console.log(this.getScreenHeight)
   }
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog,private router: Router) {}
 
   openDialog(): void {
     const dialogRef = this.dialog.open(ModalComponent, {
