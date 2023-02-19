@@ -17,13 +17,18 @@
 
             <div class="moveup">
 
-                <mat-button-toggle-group class="agebutton"name="fontStyle" aria-label="Font Style">
+           <div class="agegroup">
+                  <mat-button-toggle-group color="primary" [formControl]="fontStyleControl" class="agebutton"name="fontStyle" aria-label="Font Style">
                     <mat-button-toggle value="bold">baby</mat-button-toggle>
                     <mat-button-toggle value="italic">child</mat-button-toggle>
                     <mat-button-toggle value="underline">adult</mat-button-toggle>
-                    <mat-button-toggle value="underline">edlery</mat-button-toggle>
-                    
+                    <mat-button-toggle value="underline">elderly</mat-button-toggle>
                   </mat-button-toggle-group>
+                  
+          
+                  
+                 
+              </div>
                 <div class="search">
                     <div class="searchfields">
 
@@ -46,7 +51,7 @@
                 </mat-autocomplete>
                 </mat-form-field>
                 </div>
-
+            
         <div class="primarysearchbutton">
 
 
@@ -129,8 +134,12 @@
 
                 
                 </div>
-                <mat-checkbox color=primary (change)="onChangeadvancedoptions($event)">Advanced Options </mat-checkbox>
-
+                <div>
+                  <mat-checkbox color=primary (change)="onChangeadvancedoptions($event)">Advanced Options </mat-checkbox>
+                  <button mat-stroked-button color="warn"><mat-icon>cancel</mat-icon>Clear selection</button>
+                </div>
+                
+               
                 <div class="hidden"*ngIf="advancedoptionisShow">
                   <div  class="hiddenform">
                   <mat-form-field appearance="fill">
@@ -148,6 +157,11 @@
               
                          <mat-option *ngFor="let topping of equipList" [value]="topping" >{{topping}}</mat-option>
                       </mat-select>
+                    </mat-form-field>
+                    <br/>
+                    <mat-form-field class="example-full-width">
+                      <mat-label>Search by Keywords</mat-label>
+                      <input matInput placeholder="Type in keywords" value="">
                     </mat-form-field>
                     <br/>
                     Image orientation
@@ -204,124 +218,131 @@
       </form>
 
  <div class="collectionmaster">
-  <div class="subheader">
-    Exercise collection
-    </div>
+  <section class="collectioncardwrapper">
+
     <div>
-      Exercise Collections save you time to find the best exercise for common conditions
-    </div>
-    <button class="primarysearchbutton"mat-raised-button >Explore All Collections</button>
-    <div>
-      Here are some of our latest addidions
-    </div>
+      <div class="subheader">
+        You can also browse by Collections
+        </div>
+        <div class="subsubheader">
 
-
-
-
-
-<div class="carasoul" #widgetsContent>
-
+          Exercise Collections save you time to find the best exercise for common conditions.
+          <br/>
+          Exercises are handpicked by experienced phyiotherapists specialised in that area to ensure exercises are of high quality and evidence based. 
+        </div>
+        <button class="primarysearchbutton"mat-raised-button >Explore All Collections</button>
+        
   
-  <mat-card class="example-card">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Shiba Inu</mat-card-title>
-      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-    <mat-card-content>
-      <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
-  </mat-card>
 
-  <mat-card class="example-card">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Shiba Inu</mat-card-title>
-      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-    <mat-card-content>
-      <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
-  </mat-card>
+    </div>
+    <div class="imagehidden">
+      <img src="../../assets/undraw_folder_re_apfp.svg" class="exerciseimage">
 
-  <mat-card class="example-card">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Shiba Inu</mat-card-title>
-      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-    <mat-card-content>
-      <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
-  </mat-card>
+    </div>
+   
 
-  <mat-card class="example-card">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Shiba Inu</mat-card-title>
-      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-    <mat-card-content>
-      <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
-  </mat-card>
+  </section>
+  
+    <section>
+      <div class="subheader margintop">
+        Here are some of our latest addidions
+        <mat-chip class="newchip">
+        new
+      </mat-chip>
+      </div>
+  
+  
+  
+  
+  
+  <div class="carasoul" #widgetsContent>
+  
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Osteoporosis prevention</mat-card-title>
+        <mat-card-subtitle>3 levels (15 exercises)</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-actions >
+        <button class="primarysearchbutton"mat-raised-button >Learn more</button>
+        
+      </mat-card-actions>
+    </mat-card>
 
-  <mat-card class="example-card">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Shiba Inu</mat-card-title>
-      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-    <mat-card-content>
-      <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
-  </mat-card>
-</div>
+
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Osteoporosis prevention</mat-card-title>
+        <mat-card-subtitle>3 levels (15 exercises)</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-actions >
+        <button class="primarysearchbutton"mat-raised-button >Learn more</button>
+        
+      </mat-card-actions>
+    </mat-card>
+
+
+
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Impaired balance :Elderly</mat-card-title>
+        <mat-card-subtitle>3 levels (15 exercises)</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-actions >
+        <button class="primarysearchbutton"mat-raised-button >Learn more</button>
+        
+      </mat-card-actions>
+    </mat-card>
+
+
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Osteoarthritis hip/knee</mat-card-title>
+        <mat-card-subtitle>3 levels (15 exercises)</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-actions >
+        <button class="primarysearchbutton"mat-raised-button >Learn more</button>
+        
+      </mat-card-actions>
+    </mat-card>
+
+      
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Spinal Cord injury</mat-card-title>
+        <mat-card-subtitle>3 levels (15 exercises)</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-actions >
+        <button class="primarysearchbutton"mat-raised-button >Learn more</button>
+        
+      </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>whiplash</mat-card-title>
+        <mat-card-subtitle>3 levels (15 exercises)</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-actions >
+        <button class="primarysearchbutton"mat-raised-button >Learn more</button>
+        
+      </mat-card-actions>
+    </mat-card>
+
+    
+
+    
+  
+  
+    
+  
+  
+    
+  
+    
+  </div>
+
+    </section>
+   
  </div>
 
 

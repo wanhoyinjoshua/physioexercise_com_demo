@@ -2,7 +2,7 @@
     display:absolute;
     height: auto;
       overflow: overlay;
-      background-color: ;
+      
   
   
   
@@ -23,11 +23,37 @@
 
   }
   .subheader{
-    font-size: 24px;
+    font-size: 2rem;
     font-weight:500;
   line-height: 32px;
   margin-bottom: 5vh;
     
+  }
+  .subsubheader{
+    font-size: 1.25rem;
+    font-weight:300;
+  
+  margin-bottom: 5vh;
+
+  }
+  .agegroup{
+    display: flex;
+
+  }
+  .mat-button-toggle-checked{
+    background-color: #607d8b;
+    color:white;
+
+  }
+  .mat-mdc-raised-button{
+    background-color: #607d8b;
+    color: white;
+  }
+
+  
+  
+  .textbottom{
+
   }
 
 
@@ -35,7 +61,7 @@
     background-image: linear-gradient(to right, #607d8b 0%, #495e6a 100%);
    
   height: 30vh;
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: 700;
   line-height: 62px;
   color: white;
@@ -114,10 +140,15 @@
 }
 .collectionmaster{
     padding-left: 5%;
+    margin-top: 10vh;
     
     position:relative;
   
     
+}
+.margintop{
+  margin-top:10vh;
+
 }
 .primarysearchbuttonaction{
   
@@ -142,8 +173,15 @@
  
 }
 .example-card {
+  min-width: 15vw;
   max-width: 15vw;
+  margin-bottom: 5vh;
 }
+.example-card:hover{
+  cursor: pointer;
+  background-color: #e4e8eb;
+}
+
 
 .example-header-image {
   background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
@@ -177,6 +215,43 @@
 }
 
 
+::ng-deep .mat-mdc-checkbox-checked .mdc-checkbox .mdc-checkbox__background{
+  border: #607d8b;
+  background-color: #607d8b!important;
+}
+
+::ng-deep .mdc-checkbox__ripple{
+  background-color: #607d8b !important;
+
+}
+
+.collectioncardwrapper{
+  display: flex;
+  max-width:100vw;
+  padding-right: 5%;
+ 
+  
+
+}
+.collectioncardwrapper img{
+ width: 30vw;
+  
+
+}
+
+::ng-deep .mat-mdc-standard-chip{
+  background-color: #ffca95!important;
+  color: white !important;
+  
+}
+.mdc-evolution-chip__text-label .mat-mdc-chip-action-label{
+  color: white !important;
+}
+
+::ng-deep .mat-pseudo-checkbox-checked{
+  background-color: #607d8b !important;
+
+}
 /* Responsive Styles */
 
 @media screen and (max-width: 1090px) {
@@ -195,6 +270,11 @@
   }
   .example-card {
     max-width: 25vw;
+    min-width: 25vw;
+    
+      
+      margin-bottom: 5vh;
+    
   }
   .searchfields {
     margin-right: 5px;
@@ -240,6 +320,12 @@ padding-left: 1%;
 }
 }
 @media screen and (max-width: 768px) {
+  .imagehidden{
+    display: none;
+  }
+  .collectioncardwrapper{
+    max-width: 100vw;
+  }
   .hidden{
     padding-left: 0%;
    
@@ -256,6 +342,7 @@ padding-left: 1%;
   }
   .example-card {
     max-width: 70vw;
+    min-width: 70vw;
   }
   
   .headerwords{
@@ -369,5 +456,4 @@ padding-left: 3%;
   
   
 }
-
 

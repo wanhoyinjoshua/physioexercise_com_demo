@@ -34,7 +34,9 @@ exercisediffchecked:boolean=false
 equipformcontrol = new FormControl([]);
 equipList: any = ['theraband',"mirror","treadmill"];
 equipchecked:boolean=false
-advancedoptionisShow:boolean=false
+advancedoptionisShow:boolean=false;
+fontStyleControl = new FormControl('Select age group to improve relevance of exercises!');
+fontStyle?: string;
 private _filter(value: string): string[] {
   const filterValue = value.toLowerCase();
   if(this.options.filter(option => option.toLowerCase().includes(filterValue))[0]==undefined){

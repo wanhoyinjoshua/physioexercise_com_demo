@@ -33,6 +33,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import { SelectAllOptionComponent } from './select-all-option/select-all-option.component';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatChipsModule} from '@angular/material/chips';
 const materialModules = [
   MatIconModule
 ];
@@ -77,6 +78,7 @@ const materialModules = [
     MatInputModule,
     MatSelectModule,
     MatButtonToggleModule,
+    MatChipsModule,
     ...materialModules
   ],
   exports:[
