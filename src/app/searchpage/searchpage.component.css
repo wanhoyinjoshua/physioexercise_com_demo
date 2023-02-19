@@ -140,7 +140,7 @@
 }
 .collectionmaster{
     padding-left: 5%;
-    margin-top: 10vh;
+    margin-top: 5vh;
     
     position:relative;
   
@@ -291,6 +291,7 @@
 }
 .collectionmaster{
   padding-left: 1%;
+  margin-top: 10vh;
 
 }
 .headerwords{

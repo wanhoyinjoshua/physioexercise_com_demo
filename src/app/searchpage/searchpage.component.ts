@@ -12,7 +12,7 @@ export class SearchpageComponent implements OnInit {
   searchExerciseForm: FormGroup;
   myControl = new FormControl('');
   bodycontrol=new FormControl('')
-  options: string[] = ['One', 'Two', 'Three'];
+  options: string[] = ['Parkinsons', 'C4-C6', 'Osteoarthrtisi'];
 
   bodyoptions:string[] = ['hand', 'brain', 'feet'];
   exercisetypeoption:string[]= ['cardoi', 'shit', 'strnegth'];
