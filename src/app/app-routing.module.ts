@@ -5,6 +5,7 @@ import {CustomexercisetableviewComponent} from "../app//customexercisetableview/
 import {V0customexercisetableComponent} from "../app/v0/v0customexercisetable/v0customexercisetable.component"
 import {ExercisecollectionComponent} from "../app/exercisecollection/exercisecollection.component"
 import {SearchpageComponent} from "../app/searchpage/searchpage.component"
+import {SearchbartwoComponent} from "../app/searchbartwo/searchbartwo.component"
 const routes: Routes = [
 
   {path:'',component:MaincontentComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path:'v0/custom/usersviewing',component:V0customexercisetableComponent},
   {path:'home/collections',component:ExercisecollectionComponent},
   {path:'home/search',component:SearchpageComponent},
+  {path:'v1/home/search',component:SearchbartwoComponent},
 
 
   

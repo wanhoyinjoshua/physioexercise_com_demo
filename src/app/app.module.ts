@@ -34,6 +34,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { SelectAllOptionComponent } from './select-all-option/select-all-option.component';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatChipsModule} from '@angular/material/chips';
+import { SearchbartwoComponent } from './searchbartwo/searchbartwo.component';
 const materialModules = [
   MatIconModule
 ];
@@ -53,6 +54,7 @@ const materialModules = [
     ExercisecollectionComponent,
     SearchpageComponent,
     SelectAllOptionComponent,
+    SearchbartwoComponent,
     
   ],
   imports: [

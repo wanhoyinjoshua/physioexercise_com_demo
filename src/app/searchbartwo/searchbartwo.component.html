@@ -1,0 +1,254 @@
+<div class="content">
+    <div class="searchmastercontainer">
+        <div class="shadow">
+
+            <div class="searchtitle">
+                <div class="padding">
+
+                Search
+                </div>
+            </div>
+    
+             
+            <div class="padding">
+                <mat-button-toggle-group color="primary" [formControl]="fontStyleControl" class="agebutton"name="fontStyle" aria-label="Font Style">
+                    <mat-button-toggle value="bold">baby</mat-button-toggle>
+                    <mat-button-toggle value="italic">child</mat-button-toggle>
+                    <mat-button-toggle value="underline">adult</mat-button-toggle>
+                    <mat-button-toggle value="underline">elderly</mat-button-toggle>
+                  </mat-button-toggle-group>
+    
+            </div>
+            <div class="searchcontent padding">
+               
+             
+    
+                  <div>
+                    <mat-form-field class="example-full-width" class="formfields" appearance="fill">
+                        <mat-label>  Condition/Pathology</mat-label>
+                        <input type="text"
+                                placeholder="Pick one"
+                                aria-label="Number"
+                                matInput
+                                [formControl]="myControl"
+                                [matAutocomplete]="auto">
+                                
+                        <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                            {{option}}
+                            </mat-option>
+                        </mat-autocomplete>
+                        </mat-form-field>
+    
+                  </div>
+    
+                       
+            
+    
+        <div class="primarysearchbutton">
+    
+    
+            <mat-form-field appearance="fill" class="formfields" >
+                    <mat-label><mat-icon>rowing</mat-icon>  Exercise type</mat-label>
+                    <mat-select  (selectionChange)="onextypeChange()" [formControl]="exercisetypeformcontrol" multiple>
+                    <mat-select-trigger>
+                        {{exercisetypeformcontrol.value?.[0] || ''}}
+                        <span *ngIf="(exercisetypeformcontrol.value?.length || 0) > 1" class="example-additional-selection">
+                        (+{{(exercisetypeformcontrol.value?.length || 0) - 1}} {{exercisetypeformcontrol.value?.length === 2 ? 'other' : 'others'}})
+                        </span>
+                    </mat-select-trigger>
+                    <mat-checkbox [checked]="exercisetypechecked" (click)="extypetoggleAll()" >All</mat-checkbox>
+                    
+                    
+    
+                    <mat-option *ngFor="let topping of exercisetypeList" [value]="topping" >{{topping}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+    
+        </div>
+
+        <div class="primarysearchbutton">
+    
+    
+            <mat-form-field appearance="fill"class="formfields">
+                <mat-label><mat-icon>pan_tool</mat-icon> Body Part to train?</mat-label>
+                <mat-select  (selectionChange)="onChange($event,toppings,toppingList,checked)" [formControl]="toppings" multiple>
+                    
+                <mat-select-trigger>
+                    
+                    {{toppings.value?.[0] || ''}}
+                    <span *ngIf="(toppings.value?.length || 0) > 1" class="example-additional-selection">
+                    (+{{(toppings.value?.length || 0) - 1}} {{toppings.value?.length === 2 ? 'other' : 'others'}})
+                    </span>
+                </mat-select-trigger>
+                <mat-checkbox [checked]="checked" (click)="toggleAll($event,toppings,toppingList,checked)" >All</mat-checkbox>
+                <!--<app-select-all-option [toppings]="toppings" [checked]="checked" [toppingList]="toppingList" ></app-select-all-option> --> 
+                
+
+                <mat-option *ngFor="let topping of toppingList" [value]="topping" >{{topping}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+            </div>
+    
+        <div class="primarysearchbutton">
+    
+    
+                <mat-form-field  class="formfields"  appearance="fill">
+                    <mat-label><mat-icon>outlined_flag</mat-icon>Exercise Diffuclty</mat-label>
+                    <mat-select  (selectionChange)="onexdiffChange()" [formControl]="exercisediffformcontrol" multiple>
+                    <mat-select-trigger>
+                        {{exercisediffformcontrol.value?.[0] || ''}}
+                        <span *ngIf="(exercisediffformcontrol.value?.length || 0) > 1" class="example-additional-selection">
+                        (+{{(exercisediffformcontrol.value?.length || 0) - 1}} {{exercisediffformcontrol.value?.length === 2 ? 'other' : 'others'}})
+                        </span>
+                    </mat-select-trigger>
+                    <mat-checkbox [checked]="exercisediffchecked" (click)="exdifftoggleAll()" >All</mat-checkbox>
+                    
+                    
+    
+                    <mat-option *ngFor="let topping of exercisediffList" [value]="topping" >{{topping}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+    
+                </div>
+    
+    
+                
+    
+    
+                
+    
+    
+    
+                
+            </div>
+            <div class="padding">
+                <mat-checkbox color=primary (change)="onChangeadvancedoptions($event)">Advanced Options </mat-checkbox>
+               
+              </div>
+    
+            
+            <div class="hidden padding"*ngIf="advancedoptionisShow">
+                <div  class="hiddenform">
+                    Image orientation
+                  <br/>
+                  <mat-button-toggle-group class="orientationtoggle" name="fontStyle" aria-label="Font Style">
+                    <mat-button-toggle value="bold">not specified</mat-button-toggle>
+                    <mat-button-toggle value="italic">left side affected</mat-button-toggle>
+                    <mat-button-toggle value="underline">right side affected</mat-button-toggle>
+                    
+                    
+                  </mat-button-toggle-group>
+                  
+                  <div class="searchcontent upgap">
+                  
+                        <mat-form-field appearance="fill">
+                            <mat-label>Equipment Available?</mat-label>
+                            <mat-select  (selectionChange)="onequipChange()" [formControl]="equipformcontrol" multiple>
+                              <mat-select-trigger>
+                                {{equipformcontrol.value?.[0] || ''}}
+                                <span *ngIf="(equipformcontrol.value?.length || 0) > 1" class="example-additional-selection">
+                                  (+{{(equipformcontrol.value?.length || 0) - 1}} {{equipformcontrol.value?.length === 2 ? 'other' : 'others'}})
+                                </span>
+                              </mat-select-trigger>
+                               <mat-checkbox [checked]="equipchecked" (click)="equiptoggleAll()" >All</mat-checkbox>
+                              
+                               
+                    
+                               <mat-option *ngFor="let topping of equipList" [value]="topping" >{{topping}}</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+        
+                      
+                    
+                  
+                      <mat-form-field class="example-full-width">
+                        <mat-label>Search by Keywords</mat-label>
+                        <input matInput placeholder="Type in keywords" value="">
+                      </mat-form-field>
+                      
+    
+                  </div>
+                 
+                  
+            
+            
+                      <mat-expansion-panel >
+                        <mat-expansion-panel-header>
+                          <mat-panel-title>
+                           Text to display with the exercise images
+                          </mat-panel-title>
+                          
+                          
+                        </mat-expansion-panel-header>
+                        <div class="two-col">
+            
+                        
+                        <mat-checkbox color=primary>Therapist aim</mat-checkbox>
+                        <mat-checkbox color=primary>Therapist instructions</mat-checkbox>
+                        <mat-checkbox color=primary>Progressions and variations</mat-checkbox>
+                        <mat-checkbox color=primary>Instructions for exercise repetitions</mat-checkbox>
+                        <mat-checkbox color=primary>Client's aim</mat-checkbox>
+                        <mat-checkbox color=primary>Client's instruction</mat-checkbox>
+                        <mat-checkbox color=primary>Precautions</mat-checkbox>
+                   
+                    </div>
+                    
+            
+                       
+                    
+                        
+                    
+                      </mat-expansion-panel>
+                      </div>
+            </div>
+
+        </div>
+
+        <div class="collectionmaster">
+            <section class="collectioncardwrapper">
+                
+          
+              <div>
+                <div class="subheader">
+                  You can also create your custom exercises
+                  </div>
+                  <div class="subsubheader">
+               
+          
+                   Create your own exercises to add to booklets and share them with your colleagues!
+                  </div>
+                 
+                  
+            
+          
+              </div>
+              <button (click)="goToSearch(customexerciseslink)" class="primarysearchbutton"mat-raised-button ><mat-icon>build</mat-icon>  Create My Own Custom Exercises</button>
+              
+             
+          
+            </section>
+            
+         
+             
+           </div>
+       
+    </div>
+    
+
+    
+    
+
+</div>
+
+<div class="footer">
+    
+        <button class="primarysearchbutton showexercises"mat-flat-button color="primary"><mat-icon>search</mat-icon> Show Exercises</button>
+
+        <button mat-stroked-button color="warn"><mat-icon>cancel</mat-icon>Clear selection</button>
+
+   
+
+</div>
+
+
