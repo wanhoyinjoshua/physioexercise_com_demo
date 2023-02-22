@@ -6,6 +6,51 @@ import { MatRadioChange } from '@angular/material/radio';
   styleUrls: ['./exercisecollection.component.css']
 })
 export class ExercisecollectionComponent {
+  value = ""
+  posts:any=[
+    {title:"osteoporosis",level:[{level:"1",levelheader:"High Risk-Moderate Impact activities",leveldescrption:`Sanet is a 82 year old women who recently slipped in the bathroom at home and sustained a hip fracture, she also had two previous falls prior to this current fall, she was hospitalised and 
+    the fracture was surgically managed, she was now discharged back home with her mobility below baseline. 
+    
+    She mobilise with a 4WW amnd walks slowly, she also had impaired balance and am quite scared of walking because of the fall. 
+    
+    The aim of Sanet's program was to encourage movement and minimise bone loss by incoporating moderate to low impact exercises to increase muscle strength and improve balance to maximise functional mobility and improve quality of life.
+    
+    `,levelimage:"",value:"osteoporosis"},{level:"2",levelheader:"Low risk Moderate-High impact activities",leveldescrption:`Dalia is a 73- year old women and had a history of low trauma Colles' fracture 11 years ago. 
+    She  is independent with all ADLS but have trouble balancing at times.
+
+The aim of Dalia's program is to minimise bone loss by incporating moderate impact exercises and improve muscle strength to support mobility and balance to minimise risk of falling.
+
+This program is suitable for people who are independent with short distances walking but may or may not require aids for longer distances.`,levelimage:"",value:"osteoporosismedium"},
+
+{level:"3",levelheader:"High Impact Activities",leveldescrption:`   Frank is independent with all ADLS and had no previous history of fractures.
+<br/>
+The aim of franks program is to minimise bone loss by incporating high impact exercises and maintaining muscle strength to support mobility and balance for optimal participation in the community 
+<br/>
+This program is suitable for people who are independent with walking and able to balance on one leg.`,levelimage:"",value:"osteoporosishard"}]}
+    ,{title:"c5-injury",level:[{level:"1",levelheader:"1title",leveldescrption:"1description",levelimage:"",value:"osteoporosishard"}]}
+  
+  
+  ]
+  match:boolean;
+  filteredArray: any=this.posts
+  clear(){
+    this.value=""
+    this.filteredArray = this.posts;
+
+  }
+  getPostByName(event: any) {
+    
+    let filtered = this.posts.filter((post: { title: any; }) => {
+      this.match==true
+      return post.title.includes(event.target.value)
+    })
+    this.filteredArray = filtered
+    if (this.filteredArray.length <= 0) {
+      this.match==false
+      this.filteredArray = [];
+    }
+  }
+
   exercise:any =
   {
     osteoporosis:[
@@ -42,6 +87,7 @@ export class ExercisecollectionComponent {
   radioButtonGroupChange(data:MatRadioChange) {
 
     this.displaydata=this.exercise[data.value]
+    console.log(data.value)
     
 
  

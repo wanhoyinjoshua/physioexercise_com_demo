@@ -32,6 +32,9 @@
 }
 .contentwrapper .right{
     width: 50%;
+    padding-left: 1vw;
+    padding-right: 1vw;
+
 }
 
 .accordian{
@@ -105,4 +108,52 @@
     border-style: solid;
    
 
+}
+
+.noselectionimg{
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.noselectionimgimg{
+  width: 60% !important;
+  margin: 0 auto;
+  
+}
+.noselectionimgimgsmaller{
+  width: 10px;
+  margin: 0 auto;
+
+}
+
+.center{
+  text-align: center;
+}
+.form-field{
+  width: 100%;
+}
+.panels{
+  margin-bottom: 2vh;
+}
+  
+.mat-expansion-panel-header{
+  background-color: #607d8b !important;
+}
+
+.mat-expansion-panel-header .mat-expanded{
+  background-color: #607d8b !important;
+  color: white !important;
+}
+
+.mat-expansion-panel-header-title{
+  font-family: Roboto, sans-serif !important;
+  color: white !important;
+
+}
+
+.lefterror{
+  width: 10vw;
 }
