@@ -36,6 +36,7 @@ This program is suitable for people who are independent with walking and able to
   clear(){
     this.value=""
     this.filteredArray = this.posts;
+    this.displaydata=null
 
   }
   getPostByName(event: any) {
