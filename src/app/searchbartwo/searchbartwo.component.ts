@@ -15,7 +15,20 @@ export class SearchbartwoComponent {
   myControl = new FormControl('');
   bodycontrol=new FormControl('')
   customexerciseslink="v0/custom/usersviewing"
-  
+  isExercisegroup:any;
+  tabchange(event:any){
+    
+    if(event.index==0){
+      this. isExercisegroup=false
+    }
+    else{
+      this. isExercisegroup=true
+
+    }
+
+    console.log(this.isExercisegroup)
+
+  }
   goToSearch(linkurl:any){
     const navigationDetails: string[] = [linkurl];
   

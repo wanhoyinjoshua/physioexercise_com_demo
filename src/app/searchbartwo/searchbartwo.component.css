@@ -71,6 +71,7 @@ margin-left: 5%;
 
   .showexercises.mat-mdc-unelevated-button.mat-primary{
     background-color: #7cb342!important;
+    width: auto;
     color: white;
     
   }
@@ -185,7 +186,16 @@ margin-left: 5%;
 }
   
 
+.example-tab-icon {
+    margin-right: 8px;
+  }
 
+  .tab{
+    width: 100%;
+  }
+  .tabitem{
+    background-color: #607d8b;
+  }
 @media screen and (max-width: 1090px) {
    
    
@@ -231,6 +241,9 @@ margin-left: 5%;
   }
   }
   @media screen and (max-width: 768px) {
+    .hiddenicon{
+        display:none;
+    }
     .searchcontent{
         display: flex;
        flex-direction: column;
