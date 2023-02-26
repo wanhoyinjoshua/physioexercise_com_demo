@@ -14,6 +14,7 @@ const routes: Routes = [
   {path:'home/collections',component:ExercisecollectionComponent},
   {path:'home/search',component:SearchpageComponent},
   {path:'v1/home/search',component:SearchbartwoComponent},
+  {path:'home/collections/:exid',component:ExercisecollectionComponent},
 
 
   

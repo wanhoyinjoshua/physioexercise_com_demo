@@ -1,11 +1,39 @@
-import { Component } from '@angular/core';
+
 import { MatRadioChange } from '@angular/material/radio';
+import {Input,Component, Inject,HostListener, OnInit} from '@angular/core';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {ModalComponent} from "../modal/modal.component"
+import { ActivatedRoute } from "@angular/router";
+import {ExercisecollectionmodalComponent} from "../exercisecollectionmodal/exercisecollectionmodal.component"
 @Component({
   selector: 'app-exercisecollection',
   templateUrl: './exercisecollection.component.html',
   styleUrls: ['./exercisecollection.component.css']
 })
-export class ExercisecollectionComponent {
+export class ExercisecollectionComponent  implements OnInit{
+
+  constructor(public dialog: MatDialog,private route: ActivatedRoute) {}
+  exid:any;
+  filteredcollection:any
+  ngOnInit() {
+    
+    this.getScreenWidth = window.innerWidth;
+    this.getScreenHeight = window.innerHeight;
+    this.route.params.subscribe(params=>{
+     this.exid = params['exid'];
+      console.log(this.exid)
+      this.filteredcollection= this.posts.filter((post: { title: any; }) => {
+        this.match==true
+        return post.title.includes( params['exid'])
+      })
+  })
+  }
+  @HostListener('window:resize', ['$event'])
+  onWindowResize() {
+  this.getScreenWidth = window.innerWidth;
+  this.getScreenHeight = window.innerHeight;
+  console.log(this.getScreenHeight)
+  }
   value = ""
   posts:any=[
     {title:"osteoporosis",level:[{level:"1",levelheader:"High Risk-Moderate Impact activities",leveldescrption:`Sanet is a 82 year old women who recently slipped in the bathroom at home and sustained a hip fracture, she also had two previous falls prior to this current fall, she was hospitalised and 
@@ -92,6 +120,31 @@ This program is suitable for people who are independent with walking and able to
     
 
  
+}
+getScreenWidth:any;
+getScreenHeight :any
+
+
+
+
+
+showcollection(name:any){
+  console.log(name)
+  const dialogRef = this.dialog.open(ExercisecollectionmodalComponent, {
+  
+    width: this.getScreenWidth>600?"50vw":"100vw",
+    height:this.getScreenWidth>600?"auto":"auto",
+    
+    data: {content:this.exercise[name],title:"hi"}
+  });
+
+  dialogRef.afterClosed().subscribe(result => {
+    console.log('The dialog was closed');
+
+  });
+
+
+
 }
 
 

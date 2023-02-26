@@ -1,19 +1,14 @@
-import { Component, OnInit,ElementRef,AfterViewInit, ViewChild  } from '@angular/core';
+import { Component, OnInit,ViewChild,ElementRef } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
 import { Router } from '@angular/router';
-import {SearchcollectionformComponent} from "../searchcollectionform/searchcollectionform.component"
 @Component({
-  selector: 'app-searchbartwo',
-  templateUrl: './searchbartwo.component.html',
-  styleUrls: ['./searchbartwo.component.css'],
-  template:`
-  
-  <app-searchcollectionform #searchcollection> </app-searchcollectionform>
-  `
+  selector: 'app-searchexerciseform',
+  templateUrl: './searchexerciseform.component.html',
+  styleUrls: ['./searchexerciseform.component.css']
 })
-export class SearchbartwoComponent {
+export class SearchexerciseformComponent {
 
   constructor(private router: Router) {}
   searchExerciseForm: FormGroup;
@@ -249,19 +244,16 @@ public getScreenHeight: any;
 
 
      }
-     seconds:any
-     @ViewChild(SearchcollectionformComponent) 
-     collectionform!: SearchcollectionformComponent;
-    
-    
-  
-    collectionsearch(){
-      console.log(this.collectionform.searchCollectionForm.value)
-      const navigationDetails: string[] = [`/home/collections/${this.collectionform.searchCollectionForm.value}`];
+
+     @ViewChild('widgetsContent') widgetsContent: ElementRef;
+     scrollLeft(){
       
-      this.router.navigate(navigationDetails);
-
+      this.widgetsContent.nativeElement.scrollLeft -= this.getScreenWidth*0.3;
     }
-
+  
+    scrollRight(){
+      this.widgetsContent.nativeElement.scrollLeft += this.getScreenWidth*0.3;
+    }
+  
 
 }

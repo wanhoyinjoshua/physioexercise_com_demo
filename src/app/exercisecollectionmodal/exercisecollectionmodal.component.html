@@ -1,0 +1,51 @@
+<section class="scroll">
+    <div>
+    <div  *ngFor="let hero of data.content">
+
+               
+        <h1 class="title">
+            {{hero.title}}
+        </h1>
+        <div class="resistance">
+            
+            
+            <div>
+               <img width="50%"src={{hero.img}}/>
+    
+            </div>
+            <div>
+                <span>
+                    <strong>Client's Aim</strong>
+                    <div>
+                       {{hero.clientaim}}
+                    </div>
+    
+                </span>
+                <span>
+                    <strong>Client's Instructions</strong>
+                    <div>
+                        {{hero.clientinstruction}}
+                    </div>
+    
+                </span>
+                <br/>
+                <span *ngIf="hero.precautions">
+                    
+                    <strong>
+                       Precautions
+                    </strong>
+                    <br/>
+                    {{hero.precautions}}
+    
+                </span>
+               
+    
+            </div>
+    
+           
+        </div>
+    
+    </div>
+</div>
+
+</section>

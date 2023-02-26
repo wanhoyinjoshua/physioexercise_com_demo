@@ -36,6 +36,9 @@ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatChipsModule} from '@angular/material/chips';
 import { SearchbartwoComponent } from './searchbartwo/searchbartwo.component';
 import {MatTabsModule} from '@angular/material/tabs';
+import { SearchexerciseformComponent } from './searchexerciseform/searchexerciseform.component';
+import { SearchcollectionformComponent } from './searchcollectionform/searchcollectionform.component';
+import { ExercisecollectionmodalComponent } from './exercisecollectionmodal/exercisecollectionmodal.component';
 const materialModules = [
   MatIconModule
 ];
@@ -56,6 +59,9 @@ const materialModules = [
     SearchpageComponent,
     SelectAllOptionComponent,
     SearchbartwoComponent,
+    SearchexerciseformComponent,
+    SearchcollectionformComponent,
+    ExercisecollectionmodalComponent,
     
   ],
   imports: [

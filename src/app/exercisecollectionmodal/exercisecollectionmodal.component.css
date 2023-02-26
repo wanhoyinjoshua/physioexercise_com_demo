@@ -1,3 +1,11 @@
+
+
+.scroll{
+    padding: 1%;
+  max-height: 80vh;
+      overflow: overlay;
+
+}
 .content{
     display:absolute;
     height: 100%;
@@ -28,15 +36,12 @@
   }
 
 .contentwrapper{
-    
-}
-
-.left{
-    width: 100%;
     display: flex;
     flex-direction: row;
-    gap: 3%;
-    
+}
+
+.contentwrapper .left{
+    width: 50%;
 }
 .contentwrapper .right{
     width: 50%;
