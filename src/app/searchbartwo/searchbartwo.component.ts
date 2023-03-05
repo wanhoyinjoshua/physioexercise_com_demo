@@ -66,6 +66,8 @@ equipchecked:boolean=false
 advancedoptionisShow:boolean=false;
 fontStyleControl = new FormControl('Select age group to improve relevance of exercises!');
 fontStyle?: string;
+
+mode:boolean= true;
 private _filter(value: string): string[] {
   const filterValue = value.toLowerCase();
   if(this.options.filter(option => option.toLowerCase().includes(filterValue))[0]==undefined){
@@ -260,6 +262,19 @@ public getScreenHeight: any;
       const navigationDetails: string[] = [`/home/collections/${this.collectionform.searchCollectionForm.value}`];
       
       this.router.navigate(navigationDetails);
+
+    }
+
+    setmode(bool:boolean){
+
+      if(bool){
+        this.mode=true
+
+      }
+      else{
+        this.mode=false
+
+      }
 
     }
 

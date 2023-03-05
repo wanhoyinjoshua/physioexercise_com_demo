@@ -38,6 +38,7 @@
     gap: 3%;
     
 }
+
 .contentwrapper .right{
     width: 50%;
     padding-left: 1vw;
@@ -74,7 +75,8 @@
     text-align: center;
   }
   .example-card{
-    max-width: 300px;
+    min-width: 300px;
+    
   }
 
   .example-card * img{
@@ -99,6 +101,10 @@
     padding-right: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .padding{
+    padding: 10px;
   }
 
   .header{
@@ -164,4 +170,94 @@
 
 .lefterror{
   width: 10vw;
+}
+
+.flexcontainer{
+  display: flex;
+  flex-direction: row;
+
+  
+  
+  gap:5%;
+  
+  
+}
+
+.flexcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  
+  margin-top: 2%;
+
+ 
+}
+
+.flexcontainer  .example-card {
+  flex-grow: 1;
+  max-width: 30%;
+  cursor: pointer;
+  margin-top: 1%;
+  
+
+  justify-content:space-between; display: flex; flex-direction: column; 
+
+  
+}
+
+.gg{
+height: inherit;
+
+  justify-content: space-between; display: flex; flex-direction: column; 
+
+}
+
+.titleheader{
+  background-image: linear-gradient(to right, #607d8b 0%, #495e6a 100%);
+  color: rgb(255, 250, 237);
+  border-top-left-radius: 5px 5px;
+  border-top-right-radius: 5px 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  
+  .flexcontainer  .example-card{
+    flex-grow: 1;
+    width:90%;
+    cursor: pointer;
+  }
+
+  .content{
+    display:absolute;
+    height: 100%;
+      overflow: overlay;
+  
+  
+  
+    
+    margin-left: 0%;
+    margin-top:10vh;
+    padding:2%;
+    
+
+}
+
+}
+
+@media screen and (max-width: 430px) {
+  
+  .flexcontainer  .example-card{
+    
+    width:60%;
+    cursor: pointer;
+  }
 }

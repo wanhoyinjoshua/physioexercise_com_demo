@@ -3,38 +3,27 @@
         <div class="shadow">
             
             <div class="tab">
-
-          
-            <mat-tab-group (selectedTabChange)="tabchange($event)" mat-stretch-tabs animationDuration="0ms">
-                <mat-tab class="tabitem">
-                  <ng-template class="tabitem" mat-tab-label>
-                    <mat-icon class="example-tab-icon hiddenicon ">build</mat-icon>
-                   Search Exercises
-                  </ng-template>
-<div class="hidden">
+              <section class="tabtab">
+                <button  (click)="setmode(true)"[ngClass]="mode ? '' : 'inactivebutton'" mat-raised-button >Search Exercises</button>
+                <button   (click)="setmode(false)" mat-raised-button [ngClass]="mode ? 'inactivebutton' : ''"  > Search Exercise collections</button>
+              </section>
+<div *ngIf="mode">
+  <div class="hidden">
     <app-searchexerciseform ></app-searchexerciseform> 
 
 </div>
-                
-                </mat-tab>
-              
-                <mat-tab class="tabitem">
-                  <ng-template class="tabitem" mat-tab-label>
-                    <mat-icon class="example-tab-icon hiddenicon ">collections</mat-icon>
-                    Search Exercise collections
-                  </ng-template>
-<div class="hidden">
+
+</div>
+
+<div *ngIf="!mode">
+  <div class="hidden">
     <app-searchcollectionform></app-searchcollectionform>
 
 </div>
-               
-                 
-                </mat-tab>
 
-
-              
-             
-              </mat-tab-group>
+</div>
+          
+           
               <br/>
             </div>
             
@@ -82,13 +71,13 @@
     
 
        
-        <button (click)="collectionsearch()" *ngIf="isExercisegroup" class="primarysearchbutton showexercises"mat-flat-button color="primary"><mat-icon class="">search</mat-icon> <span>Show Exercises Collection </span></button>
+        <button (click)="collectionsearch()" *ngIf="!mode" class="primarysearchbutton showexercises"mat-flat-button color="primary"><mat-icon class="">search</mat-icon> <span>Show Exercises Collection </span></button>
 
        
        
     
         
-        <button *ngIf="!isExercisegroup" class="primarysearchbutton showexercises"mat-flat-button color="primary"><mat-icon class="">search</mat-icon> Show Exercises</button>
+        <button *ngIf="mode" class="primarysearchbutton showexercises"mat-flat-button color="primary"><mat-icon class="">search</mat-icon> Show Exercises</button>
       
 
    
