@@ -27,21 +27,34 @@
               <mat-card *ngFor="let hero of hero.level" class="example-card gg" >
                 <div>
                   
-                  <div><strong>Level {{hero.level}}</strong></div>
-                  <div> {{hero.levelheader}}</div>
+                  <section class="blueheader">
+                    <!--<div><strong>Level {{hero.level}}</strong></div>-->
+                    <div> <strong>{{hero.levelheader}}</strong></div>
 
-                  <img width="100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-ydZ7jGlF7dMY0OC-ERhN1bm_oI01IUa4Ow&usqp=CAU" alt="Photo of a Shiba Inu">
+                  </section>
+             <section class="containerv">
+              <div [ngClass]="['img',hero.levelimage]">
+              
+                
+              </div>
+              <div class="padding">
+                <div [innerHtml]="hero.leveldescrption">
+                        
+
+
+                </div>
+              </div>
+
+             </section>
+                  
+                  
 
               
                 <mat-card-content class="gg">
                   
                  
                  
-                      <div>
-                        {{hero.leveldescrption}}
-
-
-                      </div>
+                      
                     
 
                     

@@ -36,7 +36,8 @@ export class ExercisecollectionComponent  implements OnInit{
   }
   value = ""
   posts:any=[
-    {title:"osteoporosis",level:[{level:"1",levelheader:"High Risk-Moderate Impact activities",leveldescrption:`Sanet is a 82 year old women who recently slipped in the bathroom at home and sustained a hip fracture, she also had two previous falls prior to this current fall, she was hospitalised and 
+    {title:"osteoporosis",
+    level:[{level:"1",levelheader:"High Risk-Moderate Impact activities",leveldescrption:`Sanet is a 82 year old women who recently slipped in the bathroom at home and sustained a hip fracture, she also had two previous falls prior to this current fall, she was hospitalised and 
     the fracture was surgically managed, she was now discharged back home with her mobility below baseline. 
     
     She mobilise with a 4WW amnd walks slowly, she also had impaired balance and am quite scared of walking because of the fall. 
@@ -55,7 +56,52 @@ This program is suitable for people who are independent with short distances wal
 The aim of franks program is to minimise bone loss by incporating high impact exercises and maintaining muscle strength to support mobility and balance for optimal participation in the community 
 <br/>
 This program is suitable for people who are independent with walking and able to balance on one leg.`,levelimage:"",value:"osteoporosishard"}]}
-    ,{title:"c5-injury",level:[{level:"1",levelheader:"1title",leveldescrption:"1description",levelimage:"",value:"osteoporosishard"}]}
+    ,{title:"c5-injury",level:[{level:"1",levelheader:"1title",leveldescrption:"1description",levelimage:"",value:"osteoporosishard"}]},
+    {
+      title:"Osteoarthritis", level:[{level:"1",levelheader:"Knee osteoarthritis: Mild",
+      leveldescrption:`Joan has mild knee symptoms that are impacting her lifestyle.
+      <br>
+      The aim of her program is to improve her symptoms, maintain and improve functional activity.
+      <br>
+      This program is suitable for someone with early stage (mild to moderate) knee osteoarthritis.
+      
+      `,levelimage:"person_joan",value:"osteoporosis"},{level:"2",levelheader:"Knee osteoarthritis: Severe",
+      leveldescrption:`
+      Anne has severe knee osteoarthritis that is causing her pain, limiting her lifestyle and quality of life.
+      <br>
+      The aim of her program is to improve symptoms, maintain and improve functional activity.
+      <br>
+      This program is suitable for someone with late stage (severe) knee osteoarthritis.
+      
+      
+      `,levelimage:"person_anne",value:"osteoporosismedium"},
+  
+  {level:"3",levelheader:"Knee osteoarthritis: Neuromuscular exercises",leveldescrption:` 
+  Alice is experiencing mild knee symptoms, decreased knee control, decreased proprioception and loss of function as a result of her knee osteoarthritis.
+  <br>
+  The aim of her program is to improve her knee control, maintain and improve functional activity.
+  <br>
+  This program is suitable for someone with mild knee osteoarthritis (patellofemeral osteoarthritis).
+  
+  `,levelimage:"person_jan",value:"osteoporosishard"},
+  {level:"3",levelheader:"Hip Osteoarthritis: Mild",leveldescrption:`  
+  Jan has mild hip symptoms and reduced hip mobility that is impacting her daily activities.
+  <br>
+  The aim of her program is to improve symptoms, maintaiin and improve functional activity.  
+  <br>
+  This program is suitable for someone with early stage (mild to moderate) hip osteoarthritis.
+
+  `,levelimage:"person_trudy",value:"osteoporosishard"},
+  {level:"3",levelheader:"Hip Osteoarthritis: Severe",leveldescrption:`Trudy has severe osteoarthritis that is causing her pain, limiting her daily activities and quality of life.<br><br>The aim of her program is to improve symptoms, maintain and improve functional activity. This program is suitable for someone wiht late stage (severe) hip osteoarthritis.`
+  
+  ,levelimage:"person_alice",value:"osteoporosishard"}
+
+
+
+
+
+]
+    }
   
   
   ]

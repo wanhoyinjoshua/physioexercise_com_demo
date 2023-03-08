@@ -196,7 +196,7 @@
   flex-grow: 1;
   max-width: 30%;
   cursor: pointer;
-  margin-top: 1%;
+  margin-top: 4%;
   
 
   justify-content:space-between; display: flex; flex-direction: column; 
@@ -223,9 +223,43 @@ height: inherit;
 }
 
 
+.blueheader{
+  background-color: #607d8b;
+  color: white;
+  padding: 2%;
+  font-size: 1rem;
+}
 
+.img{
+ 
+  background-image: url(https://static.physiotherapyexercises.com/Sprite/WebP-Person-2022_07_23_13_53_02.webp);
+    
+  min-width: 120px;
+    height: 181px;
+}
+.person_joan{
+  background-position: -720px 0;
 
+}
+.person_anne{
+  background-position: -240px 0;
+}
+.person_jan {
+  background-position: -600px 0;
+}
+.person_trudy {
+  background-position: -480px -181px;
+}
+.person_alice {
+  background-position: -120px 0;
+}
 
+.containerv{
+  display: flex;
+  flex-direction: row;
+    padding: 0.5rem;
+    width: 100%;
+}
 
 
 @media screen and (max-width: 768px) {
@@ -234,6 +268,7 @@ height: inherit;
     flex-grow: 1;
     width:90%;
     cursor: pointer;
+    margin-top: 10%;
   }
 
   .content{

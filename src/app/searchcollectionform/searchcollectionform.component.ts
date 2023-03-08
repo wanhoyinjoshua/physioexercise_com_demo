@@ -13,7 +13,7 @@ export class SearchcollectionformComponent {
   constructor(private router: Router) {}
   filteredOptions:any;
   searchCollectionForm=new FormControl('');
-  options: string[] = ['osteoporosis','c5-injury'];
+  options: string[] = ["Impaired balance",'osteoporosis','c5-injury',"Osteoarthritis","Spinal Cord Injury","Whiplash"];
   private _filter(value: string): string[] {
     const filterValue = value.toLowerCase();
     if(this.options.filter(option => option.toLowerCase().includes(filterValue))[0]==undefined){
