@@ -12,8 +12,8 @@ const routes: Routes = [
   {path:'custom/usersviewing',component:CustomexercisetableviewComponent},
   {path:'v0/custom/usersviewing',component:V0customexercisetableComponent},
   {path:'home/collections',component:ExercisecollectionComponent},
-  {path:'home/search',component:SearchpageComponent},
-  {path:'v1/home/search',component:SearchbartwoComponent},
+  {path:'home/search',component:SearchbartwoComponent},
+  {path:'v1/home/search',component:SearchpageComponent},
   {path:'home/collections/:exid',component:ExercisecollectionComponent},
 
 
