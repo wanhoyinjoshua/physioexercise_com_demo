@@ -270,3 +270,14 @@ tr :hover{
 .fontawesomesvg:hover{
   color: white;
 }
+.dashboardblueheader{
+  background-image: linear-gradient(to right, #607d8b 0%, #495e6a 100%);
+  color: rgb(255, 250, 237);
+  border-top-left-radius: 5px 5px;
+  border-top-right-radius: 5px 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+
+  
+}
