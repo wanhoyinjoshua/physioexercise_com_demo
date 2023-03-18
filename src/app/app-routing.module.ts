@@ -6,6 +6,8 @@ import {V0customexercisetableComponent} from "../app/v0/v0customexercisetable/v0
 import {ExercisecollectionComponent} from "../app/exercisecollection/exercisecollection.component"
 import {SearchpageComponent} from "../app/searchpage/searchpage.component"
 import {SearchbartwoComponent} from "../app/searchbartwo/searchbartwo.component"
+
+import {ReviewProgressComponent} from "../app/review-progress/review-progress.component"
 const routes: Routes = [
 
   {path:'',component:MaincontentComponent},
@@ -15,6 +17,7 @@ const routes: Routes = [
   {path:'home/search',component:SearchbartwoComponent},
   {path:'v1/home/search',component:SearchpageComponent},
   {path:'home/collections/:exid',component:ExercisecollectionComponent},
+  {path:'user/review',component:ReviewProgressComponent},
 
 
   

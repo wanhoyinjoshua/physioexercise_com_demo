@@ -39,6 +39,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { SearchexerciseformComponent } from './searchexerciseform/searchexerciseform.component';
 import { SearchcollectionformComponent } from './searchcollectionform/searchcollectionform.component';
 import { ExercisecollectionmodalComponent } from './exercisecollectionmodal/exercisecollectionmodal.component';
+import { ReviewProgressComponent } from './review-progress/review-progress.component';
 const materialModules = [
   MatIconModule
 ];
@@ -62,6 +63,7 @@ const materialModules = [
     SearchexerciseformComponent,
     SearchcollectionformComponent,
     ExercisecollectionmodalComponent,
+    ReviewProgressComponent,
     
   ],
   imports: [
