@@ -1,9 +1,12 @@
-import {AfterViewInit, Component,ViewChild } from '@angular/core';
+import {AfterViewInit, Component,ViewChild,HostListener } from '@angular/core';
 import { SelectionModel } from '@angular/cdk/collections';
 import {ThemePalette} from '@angular/material/core';
 import { MatTableDataSource,MatTableModule } from '@angular/material/table';
 import {MatSort} from '@angular/material/sort';
 import {MatPaginator} from '@angular/material/paginator';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import {ModalComponent} from "../modal/modal.component"
+import {SettingmodalComponent } from "../settingmodal/settingmodal.component"
 import {
   trigger,
   state,
@@ -11,6 +14,11 @@ import {
   transition,
   animate,
 } from '@angular/animations';
+interface Food {
+  value: string;
+  viewValue: string;
+}
+
 export interface Exerciseentry {
   category: string;
   title: string;
@@ -84,6 +92,37 @@ precaution:"make sure you follow prescriptions"
   ],
 })
 export class ReviewProgressComponent implements AfterViewInit  {
+getScreenWidth:any;
+getScreenHeight:any;
+
+  ngOnInit() {
+    
+    this.getScreenWidth = window.innerWidth;
+    this.getScreenHeight = window.innerHeight;
+}
+@HostListener('window:resize', ['$event'])
+onWindowResize() {
+  this.getScreenWidth = window.innerWidth;
+  this.getScreenHeight = window.innerHeight;
+  console.log(this.getScreenHeight)
+}
+constructor(public dialog: MatDialog) {}
+
+openDialog(): void {
+  const dialogRef = this.dialog.open(SettingmodalComponent, {
+  
+    width: this.getScreenWidth>600?"50vw":"100vw",
+    height:this.getScreenWidth>600?"auto":"auto",
+    
+    data: {content:"hi",title:"hi"}
+  });
+
+  dialogRef.afterClosed().subscribe(result => {
+    console.log('The dialog was closed');
+   
+  });
+}
+
   @ViewChild(MatPaginator) paginator: MatPaginator ;
   @ViewChild(MatSort) sort: MatSort;
   displayedColumns: string[] = [
@@ -131,7 +170,11 @@ show={
 
   
 
-
+  foods: Food[] = [
+    {value: 'steak-0', viewValue: 'Steak'},
+    {value: 'pizza-1', viewValue: 'Pizza'},
+    {value: 'tacos-2', viewValue: 'Tacos'},
+  ];
   
 
 }

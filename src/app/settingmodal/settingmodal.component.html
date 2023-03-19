@@ -1,0 +1,111 @@
+<div class="master">
+    <div mat-dialog-content class="">
+        <div class="">
+
+           <section>
+            <h2>
+                Filter by Status
+                <mat-icon matTooltip="(Click on check boxes below to filter programs by status)">info</mat-icon>
+            </h2>
+            <table class="tablesetting">
+                <thead>
+                    <tr>
+                        <td>
+                            
+                        </td>
+                        <td>
+                            Program by Status
+
+                        </td>
+                        <td>
+                            Count
+
+                        </td>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>
+                        <mat-checkbox class="example-margin"></mat-checkbox>
+
+                    </td>
+                    <td>
+                        Client has not opened the app
+
+                    </td>
+                    <td>
+                        1
+
+                    </td>
+                </tr>
+            </table>
+           </section>
+
+           <section>
+            <h2>
+                Set Acceptable Completion
+                <mat-icon matTooltip="The completion column will be red if your client has not completed the percentage of exercises you set here as acceptable.">info</mat-icon>
+            </h2>
+            <div class="grid">
+                <div>
+                    The "completion" column will be red if your client has not completed the percentage of exercises you set here as acceptable.
+
+                </div>
+                <div>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Completion %</mat-label>
+                        <mat-select>
+                          <mat-option *ngFor="let food of foods" [value]="food.value">
+                            {{food.viewValue}}
+                          </mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                </div>
+                </div>
+            </section>
+
+
+            <section>
+                <h2>
+                   Show Current Clients
+                   <mat-icon matTooltip="Hide Clients more than 2 weeks old">info</mat-icon>
+                </h2>
+
+                <div>
+                    <mat-checkbox  matTooltip="Hide Clients more than 2 weeks old"
+                    aria-label="Button that displays a tooltip when focused or hovered over" class="example-margin">Show my current clients</mat-checkbox>
+                </div>
+                <div class="grid">
+                    
+                    <div>
+                       
+                    </div>
+                    </div>
+                </section>
+        
+    
+        
+
+
+
+        
+           
+        
+    
+        
+    </div>
+        
+    </div>
+    
+    <div class="headercontainer">
+        <h1 mat-dialog-title>Settings</h1>
+    <div mat-dialog-actions >
+        <button mat-button (click)="onNoClick()">Close menu</button>
+        
+      </div>
+    
+    </div>
+    
+
+</div>
+
+

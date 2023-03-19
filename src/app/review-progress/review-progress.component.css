@@ -81,9 +81,10 @@ tr.example-element-row:not(.example-expanded-row):active {
 }
 
 .example-element-detail {
+    height: auto;
   overflow: hidden;
   display: grid;
-  grid-template-columns: 1fr 10fr;
+  grid-template-columns: 1fr;
 
 }
 
@@ -291,87 +292,213 @@ tr :hover{
   
 }
 
-
-
-
-* {box-sizing: border-box;}
-ul {list-style-type: none;}
-body {font-family: Verdana, sans-serif;}
-
-.month {
-  padding: 70px 25px;
-  width: 100%;
-  background: #1abc9c;
-  text-align: center;
+.p-component, .p-component * {
+    box-sizing: border-box;
 }
 
-.month ul {
-  margin: 0;
-  padding: 0;
+table > tr {
+    vertical-align: middle;
 }
 
-.month ul li {
-  color: white;
-  font-size: 20px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+.ptx-schedule-table {
+    width: 60%;
+
+    border-collapse: collapse;
+    margin: 0 auto;
 }
 
-.month .prev {
-  float: left;
-  padding-top: 10px;
+
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
 }
 
-.month .next {
-  float: right;
-  padding-top: 10px;
+td {
+    display: table-cell;
+    vertical-align: inherit;
 }
 
-.weekdays {
-  margin: 0;
-  padding: 10px 0;
-  background-color: #ddd;
+.ptx-schedule-table td {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000;
+    padding: 0;
+    text-align: center;
 }
 
-.weekdays li {
-  display: inline-block;
-  width: 13.6%;
-  color: #666;
-  text-align: center;
+.ptx-schedule-table-week-cell {
+    width: 50px;
 }
 
-.days {
-  padding: 10px 0;
-  background: #eee;
-  margin: 0;
+.ptx-schedule-table img {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000;
+    width: 50px;
 }
 
-.days li {
-  list-style-type: none;
-  display: inline-block;
-  width: 13.6%;
-  text-align: center;
-  margin-bottom: 5px;
-  font-size:12px;
-  color: #777;
+.mb-2 {
+    margin-bottom: 0.5rem!important;
 }
 
-.days li .active {
-  padding: 5px;
-  background: #1abc9c;
-  color: white !important
+.mt-2 {
+    margin-top: 0.5rem!important;
 }
 
-/* Add media queries for smaller screens */
-@media screen and (max-width:720px) {
-  .weekdays li, .days li {width: 13.1%;}
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
 }
 
-@media screen and (max-width: 420px) {
-  .weekdays li, .days li {width: 12.5%;}
-  .days li .active {padding: 2px;}
+.ptx-schedule-table-narrow {
+    width: 40px;
+}
+.ptx-schedule-table-narrow-m{
+    width: 100px;
+}
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
 }
 
-@media screen and (max-width: 290px) {
-  .weekdays li, .days li {width: 12.2%;}
+.ptx-schedule-table-img-cell {
+    width: 60px;
 }
+
+.ptx-schedule-unchecked {
+    color: red;
+}
+
+.grid{
+    width:50%;
+    margin: 0 auto;
+}
+
+.grid>.col, .grid>[class*=col] {
+    box-sizing: border-box;
+}
+.col-12 {
+    flex: 0 0 auto;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.ptx-schedule-selected {
+    background-color: #90ee90;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #000;
+    width: 20px;
+}
+
+.icon-star:before {
+    content: "\e876";
+}
+
+[class*=" icon-"]:before, [class^=icon-]:before {
+    font-family: physio;
+    font-style: normal;
+    font-weight: 400;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: 0.2em;
+    text-align: center;
+    font-feature-settings: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: 0.2em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.filtersection{
+    padding: 20px 20px 0 20px;
+}
+.example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+}
+
+.example-section {
+    margin: 12px 0;
+  }
+  
+  .example-margin {
+    margin: 0 12px;
+  }
+
+
+
+
+  @property --p{
+    syntax: '<number>';
+    inherits: true;
+    initial-value: 0;
+  }
+  
+  .pie {
+    --p:20;
+    --b:5px;
+    --c:darkred;
+    --w:60px;
+    
+    width:var(--w);
+    aspect-ratio:1;
+    position:relative;
+    display:inline-grid;
+    margin:5px;
+    place-content:center;
+    font-size:20px;
+    font-weight:bold;
+    font-family:sans-serif;
+  }
+  .pie:before,
+  .pie:after {
+    content:"";
+    position:absolute;
+    border-radius:50%;
+  }
+  .pie:before {
+    inset:0;
+    background:
+      radial-gradient(farthest-side,var(--c) 98%,#0000) top/var(--b) var(--b) no-repeat,
+      conic-gradient(var(--c) calc(var(--p)*1%),#0000 0);
+    -webkit-mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+            mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+  }
+  .pie:after {
+    inset:calc(50% - var(--b)/2);
+    background:var(--c);
+    transform:rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
+  }
+  .animate {
+    animation:p 1s .5s both;
+  }
+  .no-round:before {
+    background-size:0 0,auto;
+  }
+  .no-round:after {
+    content:none;
+  }
+  @keyframes p {
+    from{--p:0}
+  }
+  
+  .exercisebutton{
+    width: 70%;
+  }
+
+  .mat-mdc-raised-button{
+    background-color: #7cb342;
+    color: white;
+  }
+  .setting{
+    background-color: #f0f0f0;
+    color: rgb(25, 25, 25);
+    margin-bottom: 10px;
+  }

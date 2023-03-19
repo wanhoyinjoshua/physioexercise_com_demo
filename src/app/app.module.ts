@@ -40,6 +40,9 @@ import { SearchexerciseformComponent } from './searchexerciseform/searchexercise
 import { SearchcollectionformComponent } from './searchcollectionform/searchcollectionform.component';
 import { ExercisecollectionmodalComponent } from './exercisecollectionmodal/exercisecollectionmodal.component';
 import { ReviewProgressComponent } from './review-progress/review-progress.component';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import { SettingmodalComponent } from './settingmodal/settingmodal.component';
+
 const materialModules = [
   MatIconModule
 ];
@@ -64,6 +67,7 @@ const materialModules = [
     SearchcollectionformComponent,
     ExercisecollectionmodalComponent,
     ReviewProgressComponent,
+    SettingmodalComponent,
     
   ],
   imports: [
@@ -91,6 +95,7 @@ const materialModules = [
     MatButtonToggleModule,
     MatChipsModule,
     MatTabsModule,
+    MatTooltipModule,
     ...materialModules
   ],
   exports:[
